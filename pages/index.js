@@ -1,61 +1,42 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import SEO from "../components/SEO";
+import {useTheme} from '@mui/material'
+import SEO from "../components/utility/SEO";
+import Typography from '@mui/material/Typography'
+import Fab from '@mui/material/Fab';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ScrollTop from '../components/utility/ScrollToTop'
 
-export default function Home() {
+ const Home = () => {
   return (
-    <div className={styles.container}>
+    <div>
+      <Typography align='center' variant='h2'>Home</Typography>
       <SEO />
-      <h1>Home</h1>
-      {/* 
-        <main className={styles.main}>
-          <h1 className={styles.title}>
-          <Link>
-            Learn <a href='https://nextjs.org'>Next.js!</a>
-          </Link>
-        </h1>
+      <Toolbar id="back-to-top-anchor"/>
+      <Container>
+        <Box sx={{ my: 2 }}>
+          {[...new Array(50)]
+            .map(
+              () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
+            )
+            .join('\n')}
+        </Box>
+      </Container>
 
-          <p className={styles.description}>
-            Get started by editing <code className={styles.code}>pages/index.js</code>
-          </p>
-
-          <div className={styles.grid}>
-            <a href='https://nextjs.org/docs' className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-
-            <a href='https://nextjs.org/learn' className={styles.card}>
-              <h2>Learn &rarr;</h2>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-
-            <a href='https://github.com/vercel/next.js/tree/master/examples' className={styles.card}>
-              <h2>Examples &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-              className={styles.card}>
-              <h2>Deploy &rarr;</h2>
-              <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-            </a>
-          </div>
-        </main> */}
-
-      {/* <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
+      <ScrollTop>
+        <Fab color='primary' size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </div>
   );
 }
+
+export default Home
