@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+import { letterSpacing } from "@mui/system";
 
 const mindPurpDark = "#6600ff";
 const mindPurpMain = "#7926ff";
@@ -36,36 +37,65 @@ export default createTheme({
   },
   typography: {
     tab: {
-      fontFamily: "Raleway",
-      //textTransform: "none",
+      fontFamily: 'sans-serif' ,
       fontWeight: 900,
       fontSize: "0.75rem",
       letterSpacing: "1px",
     },
     h1: {
-      // fontFamily: "Raleway",
-      // fontWeight: 700,
-      // fontSize: "2.5rem",
-      color: tertiary,
+      fontFamily: 'sans-serif',
+      color: secondary,
       lineHeight: 1.5,
+      letterSpacing: 1.3,
+      // fontSize: '6rem'
     },
     h2: {
-      fontFamily: 'Raleway',
-      color: tertiary,
-      fontWeight: 700
+      fontFamily: 'sans-serif',
+      color: secondary,
+      fontWeight: 700,
+      letterSpacing: 1.3,
+      // fontSize: '3.75rem'
     },
     h3: {
-      fontFamily: 'Raleway',
-      color: secondary
+      fontFamily: 'sans-serif',
+      color: secondary,
+      fontWeight: 600,
+      letterSpacing: 1.3,
+      // fontSize: '3rem'
     },
     h4: {
-      fontFamily: 'Raleway',
-      color: secondary
+      fontFamily: 'sans-serif',
+      color: secondary,
+      fontWeight: 600,
+      letterSpacing: 1.3,
+      fontSize: '2.50rem'
     },
     h5: {
-      fontFamily: 'Raleway',
-      color: secondary
-    }
+      fontFamily: 'sans-serif',
+      color: secondary,
+      fontWeight: 600,
+      letterSpacing: 1.3,
+      // fontSize: '1.5rem'
+    },
+    h6: {
+      fontFamily: 'sans-serif',
+      color: secondary,
+      fontWeight: 700,
+      letterSpacing: 1.3,
+      fontSize: '1.25rem'
+    },
+    body1: {
+      fontFamily: 'sans-serif',
+      // fontWeight: 600,
+      letterSpacing: 1.3
+      // fontSize: '1rem'
+     },
+     body2: {
+       fontFamily: 'sans-serif',
+       letterSpacing: 1.3,
+       fontWeight: 400
+       // fontSize: '0.875rem'
+     }
   },
   components: {
     MuiInputLabel: {

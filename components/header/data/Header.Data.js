@@ -1,7 +1,7 @@
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
-import HomeRepairServiceRoundedIcon from "@mui/icons-material/HomeRepairService";
-import InfoRoundedIcon from "@mui/icons-material/Info";
-import AttachEmailRoundedIcon from "@mui/icons-material/AttachEmail";
+import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
+import InfoIcon from "@mui/icons-material/Info";
+import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 
 export const routes = [
   {
@@ -14,18 +14,18 @@ export const routes = [
     name: "Services",
     url: "/services",
     activeIndex: 1,
-    icon: <HomeRepairServiceRoundedIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
+    icon: <HomeRepairServiceIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
   },
   {
     name: "About",
     url: "/about",
     activeIndex: 2,
-    icon: <InfoRoundedIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
+    icon: <InfoIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
   },
   {
     name: "Contact",
     url: "/contact",
     activeIndex: 3,
-    icon: <AttachEmailRoundedIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
+    icon: <AttachEmailIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
   },
 ];

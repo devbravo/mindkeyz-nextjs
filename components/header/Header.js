@@ -15,7 +15,6 @@ import { StyledTab, StyledIconCont, StyledSwipeableDrawer, StyledIconButton } fr
 import { StyledBtn, StyledAppBar } from "./styles/HeaderDrawer.styles";
 import { ToolbarMargin, StyledListItem, StyledListItemText } from "./styles/HeaderDrawer.styles";
 import logo from "../../public/images/Mindkeyz-Logo_Trans-White.webp";
-import CssBaseline from '@mui/material/CssBaseline';
 import ElevationScroll from "../utility/ElevationScroll";
 
 const Header = () => {
@@ -48,7 +47,6 @@ const Header = () => {
 
   const tabs = (
     <React.Fragment>
-      <CssBaseline />
       <Tabs
         value={value}
         onChange={handleChange}
@@ -123,7 +121,7 @@ const Header = () => {
     <React.Fragment>
       <ElevationScroll>
         <StyledAppBar position='fixed'>
-          <Toolbar disableGutters={true}>
+          <Toolbar disableGutters={true} >
             <StyledBtn
               component={Link}
               href='/'
@@ -136,8 +134,7 @@ const Header = () => {
           </Toolbar>
         </StyledAppBar>
       </ElevationScroll>
-      <ToolbarMargin />
-
+      {/* <ToolbarMargin /> */}
     </React.Fragment>
   );
 };

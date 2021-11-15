@@ -10,6 +10,7 @@ export default function SEO({ description, title, siteTitle }) {
       Mindkeyz brings you more than 250+ dancehall, afrobeat and trap instrumentals.'
       />
       <link rel='icon' href='/favicon.ico' />
+      {/* <link rel="preload" href="https://Mindkeyz.infinity.airbit.com?config_id=8072&embed=1" as='document' crossOrigin></link> */}
 
       {/* <meta property='og:type' content='website' />
       <meta property='og:title' content={title} />

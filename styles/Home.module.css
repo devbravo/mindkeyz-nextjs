@@ -114,3 +114,13 @@
     flex-direction: column;
   }
 }
+
+.banner {
+  background-image: linear-gradient(rgba("#6600ff", 0.4), rgba("#0e0a11", 0.6)), url(../public/images/MindkeyzBanner.webp);
+  background-size: cover;
+  background-position: center;
+  margin-top: 0rem;
+  max-width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}

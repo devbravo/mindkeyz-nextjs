@@ -86,8 +86,11 @@ export const StyledMailRoundedIcon = styled(MailRoundedIcon)(({theme}) => ({
 }))
 
 export const StyledAddressTyp = styled(Typography)(({theme}) => ({
-  fontSize: '0.8em',
-  wordSpacing: '0.1em'
+  fontSize: '0.73em',
+  wordSpacing: '0.1em',
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '0.7em',
+  }
 }))
 
 export const StyledGridCopy = styled(Grid) (({theme}) => ({
