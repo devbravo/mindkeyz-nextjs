@@ -1,14 +1,13 @@
-import  React, { useState, useEffect } from "react";
-import { useTheme } from "@mui/material";
-import {useMediaQuery} from "@mui/material";
-import { useRouter } from 'next/router'
+import React, { useState, useEffect } from "react";
+import { useTheme, useMediaQuery } from "@mui/material";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "../utility/Link";
 import { Tabs } from "@mui/material";
 import { Toolbar, Grid } from "@mui/material";
 import { List, ListItemIcon } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { routes } from "./data/Header.Data";
 import { socials, socialsMobile } from "./data/Social.Data";
 import { StyledTab, StyledIconCont, StyledSwipeableDrawer, StyledIconButton } from "./styles/HeaderDrawer.styles";
@@ -22,14 +21,14 @@ const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const theme = useTheme();
-  const router = useRouter()
+  const router = useRouter();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   const iOS = typeof navigator !== "undefined" && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   useEffect(() => {
     [...routes].forEach(route => {
-    switch (router.pathname) {
+      switch (router.pathname) {
         case `${route.url}`:
           if (value !== route.activeIndex) {
             setValue(route.activeIndex);
@@ -42,7 +41,7 @@ const Header = () => {
   }, [value, router.pathname]);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue)
+    setValue(newValue);
   };
 
   const tabs = (
@@ -108,11 +107,11 @@ const Header = () => {
         </Grid>
       </StyledSwipeableDrawer>
       <StyledIconButton onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
-        {!openDrawer 
-        ? 
-        <MenuRoundedIcon sx={{ height: "36px", width: "36px", color: "#fff" }} /> 
-        :
-        <CloseRoundedIcon sx={{height: '36px', width: '36px', color: '#fff'}}/>}
+        {!openDrawer ? (
+          <MenuRoundedIcon sx={{ height: "36px", width: "36px", color: "#fff" }} />
+        ) : (
+          <CloseRoundedIcon sx={{ height: "36px", width: "36px", color: "#fff" }} />
+        )}
       </StyledIconButton>
     </React.Fragment>
   );
@@ -121,7 +120,7 @@ const Header = () => {
     <React.Fragment>
       <ElevationScroll>
         <StyledAppBar position='fixed'>
-          <Toolbar disableGutters={true} >
+          <Toolbar disableGutters={true}>
             <StyledBtn
               component={Link}
               href='/'
