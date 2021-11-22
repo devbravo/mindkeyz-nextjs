@@ -13,9 +13,8 @@ export const StyledAppBar = styled(AppBar)(({ theme }) => ({
 
 export const ToolbarMargin = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
-  marginBottom: "1em",
-  [theme.breakpoints.down("md")]: { marginBottom: "0.75em" },
-  [theme.breakpoints.down("sm")]: { marginBottom: "0.5em" },
+  marginBottom: "0.75em",
+  [theme.breakpoints.between("sm", "md")]: { marginBottom: "1em" },
 }));
 
 export const StyledTab = styled(Tab)(({ theme }) => ({

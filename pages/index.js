@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import NextLink from 'next/link';
-import { styled } from "@mui/material/styles";
+import Link  from '../components/utility/Link'
 import { useTheme, useMediaQuery } from "@mui/material";
 import SEO from "../components/utility/SEO";
 import Typography from "@mui/material/Typography";
@@ -11,101 +10,17 @@ import ScrollTop from "../components/utility/ScrollToTop";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusicRounded";
 import CreditCardIcon from "@mui/icons-material/CreditCardRounded";
 import DownloadIcon from "@mui/icons-material/DownloadRounded";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCartRounded";
 import BeatStore from "../components/home/BeatStore";
 import LicenseCard from "../components/home/LicenseCard";
 import LicenseData from "../components/home/data/LicensingData";
 import FaqAccordion from "../components/home/Accordion";
 import Carousel from '../components/home/Carousel'
 import banner from '../public/images/mindkeyzBanner2.webp'
-
-const StyledStack = styled(Stack)(({ theme }) => ({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  color: '#fff', 
-}));
-
-const StyledGrid = styled(Grid)(({ theme }) => ({
-  marginTop: "-0.2rem",
-  backgroundImage: `linear-gradient(#6600FF, #413E43)`,
-  height: "auto",
-}));
-
-const StyledHowToContainer = styled(Grid)(({ theme }) => ({
-  paddingTop: "2rem",
-  marginBottom: "8rem",
-  color: "#fff",
-  [theme.breakpoints.up("md")]: {
-    paddingTop: "3em",
-  },
-}));
-
-const StyledH6Typo = styled(Typography)(({ theme }) => ({
-  marginTop: "0.1em",
-  marginBottom: 0,
-  fontSize: "0.8em",
-  [theme.breakpoints.up("md")]: {
-    marginTop: "0.5em",
-    marginBottom: "0.2em",
-    fontSize: '1.25em'
-  },
-}));
-
-const StyledH4BannerTypo = styled(Typography)(({theme}) => ({
-  [theme.breakpoints.down('md')]: {
-    fontSize: '2em',
-  },
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '1em',
-    textAlign: 'center'
-  }
-}))
-
-const StyledH6BannerTypo = styled(Typography)(({theme}) => ({
-  [theme.breakpoints.down('md')]: {
-    fontSize: '1em',
-    marginBottom: '1em'
-  },
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '0.50em',
-    marginBottom: '1.5em'
-  }
-}))
-
-const StyledBtn = styled(Button)(({ theme }) => ({
-  color: "black",
-  backgroundColor: "#fff",
-  fontSize: "0.9em",
-  fontFamily: "Raleway",
-  fontWeight: "700",
-  textTransform: "capitalize",
-  letterSpacing: 1.3,
-  borderRadius: "8em",
-  padding: "0.7em 1.5em",
-  [theme.breakpoints.down('md')]: {
-    fontSize: '0.8em'
-  },
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '0.6em'
-  }
-}));
-
-const StyledShoppingCartIcon = styled(ShoppingCartIcon)(({theme}) => ({
-  [theme.breakpoints.down('md')]: {
-    fontSize: '1rem'
-  },
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '0.75rem'
-  }
-}))
-
+import {StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo  } from './styles/index.styles'
+import {StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon} from './styles/index.styles'
 
 const Home = () => {
   const theme = useTheme();
@@ -129,8 +44,9 @@ const Home = () => {
         <StyledStack alignItems='center' justifyContent='center' md={6}>
           <StyledH4BannerTypo variant='h4' sx={{mb: '0.1em'}}>Best Dancehall & Afrobeats Online</StyledH4BannerTypo>
           <StyledH6BannerTypo variant='h6' sx={{mb: '1.5em'}}>We Provide The Keys To Your Musical Mind</StyledH6BannerTypo>
-          <StyledBtn variant='contained' aria-label='scroll to beatstore'>
-            <StyledShoppingCartIcon sx={{mr: '0.3em', fontSize: '1.2rem'}} /><NextLink scrollSmooth href='#store'>Buy Beats</NextLink>
+          <StyledBtn component={Link} href="#store" variant='contained' aria-label='scroll to beatstore'>
+            <StyledShoppingCartIcon sx={{mr: '0.3em', fontSize: '1.2rem'}}/>
+            Buy Beats
           </StyledBtn>
         </StyledStack>
       </Grid>

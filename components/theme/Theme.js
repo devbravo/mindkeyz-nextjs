@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { letterSpacing } from "@mui/system";
 
 const mindPurpDark = "#6600ff";
 const mindPurpMain = "#7926ff";

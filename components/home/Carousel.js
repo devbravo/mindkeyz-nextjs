@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import ArtistCard from "./ArtistCard";
 import ArtistData from "./data/ArtistData";
-import Grid from "@mui/material/Grid";
 
 // Import Swiper styles
 import "swiper/css";
@@ -22,7 +21,7 @@ const Carousel = () => {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={10}
         grabCursor
-        // keyboard={{ enabled: true}}
+        keyboard={{ enabled: true}}
         slidesPerView={matchesMD ? 3 : matchesSM ? 2 : 1}
         navigation={matchesMD ? true : false}
         loop
@@ -35,7 +34,6 @@ const Carousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
   );
 };
 
