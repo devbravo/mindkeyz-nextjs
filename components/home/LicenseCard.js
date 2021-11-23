@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardActions from "@mui/material/CardActions";
@@ -28,8 +28,6 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 const LicenseCard = ({ ...props }) => {
   const theme = useTheme();
-  const matchesMD = useMediaQuery(theme.breakpoints.up("md"));
-  const matchesSMMD = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   return (
     <StyledCard>
