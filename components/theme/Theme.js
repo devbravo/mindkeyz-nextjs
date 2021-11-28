@@ -106,15 +106,18 @@ export default createTheme({
         },
       },
     },
-    MuiInput: {
+    MuiInputBase: {
       styleOverrides: {
-        underline: {
-          "&&:before": {
-            borderBottom: `2px solid ${mindPurpMain}`,
+        root: {
+          '&&:before': {
+            borderBottom: `0px solid ${secondary}`
           },
-          "&&:hover:not(.Mui-disabled):not(.Mui-error):before": {
-            borderBottom: `2px solid ${mindPurpMain}`,
+          '&&:hover:not(.Mui-disabled):not(.Mui-error):before': {
+            borderBottom: `1px solid ${secondary}`
           },
+          '&&:after': {
+            borderBottom: `2px solid ${mindPurpMain}`
+          }
         },
         input: {
           color: '#fff',
@@ -122,5 +125,6 @@ export default createTheme({
         },
       },
     },
+
   },
 });

@@ -98,7 +98,7 @@ const Home = () => {
           <Typography variant='h5' color={`${theme.palette.common.tertiary}`}>
             Licensing Info
           </Typography>
-          <Typography variant='body2' color={`${theme.palette.common.tertiary}`}>
+          <Typography variant='body2' color='text.secondary'>
             Please read the info before a purchase
           </Typography>
         </Stack>
@@ -120,7 +120,7 @@ const Home = () => {
           <Typography variant='h5' color={`${theme.palette.common.tertiary}`}>
             Production Credits
           </Typography>
-          <Typography variant='body2' color={`${theme.palette.common.tertiary}`}>
+          <Typography variant='body2' color='text.secondary'>
             Who we worked with
           </Typography>
         </Stack>
@@ -133,7 +133,7 @@ const Home = () => {
           <Typography variant='h5' color={`${theme.palette.common.tertiary}`}>
             FAQ
           </Typography>
-          <Typography variant='body2' color={`${theme.palette.common.tertiary}`}>
+          <Typography variant='body2' color='text.secondary'>
             What you should know
           </Typography>
         </Stack>

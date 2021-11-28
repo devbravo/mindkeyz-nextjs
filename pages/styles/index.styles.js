@@ -15,7 +15,7 @@ export const StyledStack = styled(Stack)(({ theme }) => ({
 }));
 
 export const StyledGrid = styled(Grid)(({ theme }) => ({
-  marginTop: "-0.2rem",
+  // marginTop: "-0.2rem",
   backgroundImage: `linear-gradient(#6600FF, #413E43)`,
   height: "auto",
 }));
