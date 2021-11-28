@@ -43,7 +43,7 @@ const Services = () => {
           direction='row'
           justifyContent='space-evenly'
           alignItems='center'
-          sx={{mb: '5em', ml: 'auto', mr: 'auto', height: 'auto'}} 
+          sx={{mb: '5em', mx: 'auto', height: 'auto'}} 
           md={10} 
         >
           {serviceData.map((data) => (
@@ -54,7 +54,7 @@ const Services = () => {
                   {data.service}
                 </Typography>
               </Grid>
-              <Grid item sx={{width: '15em', mr: 'auto', ml: 'auto'}}>
+              <Grid item sx={{width: '15em', mx: 'auto'}}>
                 <Typography variant='body2' align='center' color='text.secondary'>{data.info}</Typography>
               </Grid>
             </Stack>

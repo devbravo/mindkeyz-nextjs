@@ -122,9 +122,18 @@ export default createTheme({
         input: {
           color: '#fff',
           fontWeight: 300,
+          fontSize: '0.8em'
         },
       },
     },
-
+    // MuiFormHelperText: {
+    //   styleOverrides: {
+    //     root: {
+    //       backgroundColor: '#1B1C1E',
+    //       margin: 0,
+    //       padding: '5px 0 0 10px'
+    //     }
+    //   }
+    // }
   },
 });
