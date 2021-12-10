@@ -10,19 +10,19 @@ const ServicesData = [
     index: 0,
     service: 'Custom Beats',
     icon: <MusicNoteIcon sx={{color: "#6600ff", fontSize: '40px'}} />,
-    info: 'Want a Mindkeyz beat, but want to own all the rights? Lets cook you up a custom beat, with full ownership.',
+    info: 'Want a Mindkeyz beat, but want to add you own vision and own all the rights? Lets cook you up a custom beat.',
   },
   {
     index: 1,
     service: 'Mixing & Mastering',
     icon: <SpeakerIcon sx={{color: "#6600ff", fontSize: '40px'}} />,
-    info: 'After recording a song you need to have it mix & mastered professionaly. Let us put the final touches on your record.',
+    info: 'After recording a song it needs to be mix & mastered. Let us put the final touches on your record.',
   },
   {
     index: 2,
     service: 'Video Consultation',
     icon: <VideocamIcon sx={{color: "#6600ff", fontSize: '40px' }} />,
-    info: 'Want to start an online beat selling business, but dont know how? We have over 6 years of experience. Hit us up!!!'
+    info: `Want to start an online beat selling business, but don't know how? We have over 6 years of experience. Hit us up!`
   },
   {
     index: 3,
@@ -34,13 +34,13 @@ const ServicesData = [
     index: 4,
     service: 'Beat Hosting',
     icon: <YouTubeIcon sx={{color: "#6600ff", fontSize: '40px'}} />,
-    info: `Seeking exposure as a producer and want to sell your beats, our channel has over 50k subs. Let's take care of you.`
+    info: `With over 50k+ subs on YouTube, our channel is the place to be if you're an upcoming music producer.`
   },
   {
     index: 5,
     service: 'Artworks',
     icon: <PhotoIcon sx={{color: "#6600ff", fontSize: '40px'}} />,
-    info: 'Hit us up to fix you some high quality create artworks for your single, mixtape or album. For an affordable price.'
+    info: `Artworks are essential in this age of streaming. Whether you releasing an album or single. We've got you covered.`
   }
 ];
 

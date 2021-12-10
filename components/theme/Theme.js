@@ -6,7 +6,8 @@ const mindPurpLight = "#a770ff";
 const secondary = "#fff";
 const secondaryDark = "#F8F9FB";
 const secondaryDarker = "#E0E1E4";
-const tertiary = "#0e0a11";
+// const tertiary = "#0e0a11";
+const tertiary = "#000";
 const tertiayLight = "#2b2b2b";
 const tertiaryLight2 = "#202020";
 
@@ -94,7 +95,21 @@ export default createTheme({
        letterSpacing: 1.3,
        fontWeight: 400
        // fontSize: '0.875rem'
-     }
+     },
+     paragraph1: {
+       fontFamily: 'Raleway',
+       fontWeight: 400,
+       fontSize: '1.25rem',
+       letterSpacing: 1.3,
+       lineHeight: 1.6
+     },
+     paragraph2: {
+       fontFamily: 'Raleway',
+       fontWeight: 500,
+       fontSize: '0.875rem',
+       letterSpacing: 1.3,
+       lineHeight: 1.5
+     },
   },
   components: {
     MuiInputLabel: {

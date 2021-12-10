@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import {StyledPageGrid} from './styles/pages.styles'
 
 // Schema validation
 const schema = yup.object().shape({
@@ -47,14 +48,6 @@ export const StyledBtn = styled(Button)(({theme}) => ({
   }
 }))
 
-export const StyledGrid = styled(Grid)(({theme}) => ({
-  width: '100%',
-  height: '100%',
-  marginBottom: '4em',
-  marginTop: '4em',
-  color: '#fff'
-}))
-
 const Contact = () => {
   const [formData, setFormData] = useState({});
   const theme = useTheme()
@@ -80,10 +73,10 @@ const Contact = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Grid item container sx={{backgroundColor: theme.palette.common.secondaryDark}} > 
-        <StyledGrid item>
+        <StyledPageGrid item>
           <Typography align='center' color={theme.palette.common.tertiary} sx={{fontSize: '1.9em', fontWeight: 600}}>Get In Touch</Typography>
           <Typography variant='body1' align='center' color='text.secondary'>Let us know more about you!</Typography>
-        </StyledGrid>
+        </StyledPageGrid>
         <Grid item container justifyContent='center' alignItems='center' sx={{mb: '10em', }}>
           <Grid item container direction={matchesSM ? 'column' : 'row'} md={8} sx={{boxShadow: '0px 3px 15px rgba(0,0,0,0.7)'}}>
             <Grid

@@ -14,10 +14,9 @@ const Carousel = ({ ...props }) => {
       sx={{
         maxWidth: 250,
         mb: "4em",
+        mx: 'auto',
         color: theme.palette.common.tertiary,
         backgroundColor: theme.palette.common.secondaryDark,
-        ml: 'auto',
-        mr: 'auto'
       }}>
       <CardMedia component='img' height='200' image={props.image.src} alt={props.name} />
       <CardContent>
