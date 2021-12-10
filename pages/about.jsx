@@ -1,16 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import { styled } from "@mui/material/styles";
-import Link  from '../components/utility/Link'
 import {useTheme, useMediaQuery} from '@mui/material';
+import Fab from "@mui/material/Fab";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import ScrollTop from "../components/utility/ScrollToTop";
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import recordingStudio from '../public/images/studioRecording.jpeg'
- import { StyledStack, StyledH4BannerTypo, StyledH6BannerTypo } from './styles/index.styles';
- import GroupsIcon from '@mui/icons-material/Groups';
- import HighQualityIcon from '@mui/icons-material/HighQuality';
- import Card from '@mui/material/Card';
+import { StyledStack, StyledH4BannerTypo } from './styles/index.styles';
+import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import aboutCardData from './data/aboutCard.data'
@@ -131,6 +131,11 @@ const About = () => {
           </Stack>
         </Grid>
       </Grid>
+      <ScrollTop>
+        <Fab color='primary' size='small' aria-label='scroll back to top'>
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </div>
   );
 }
