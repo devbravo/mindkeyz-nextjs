@@ -14,6 +14,9 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import {StyledPageGrid} from './styles/pages.styles'
+import useAxios from '../hooks/useAxios'
+import CircularSpinner from '../components/utility/spinner';
+import BasicModal from '../components/utility/modal';
 
 // Schema validation
 const schema = yup.object().shape({
@@ -64,6 +67,17 @@ const Contact = () => {
   const onSubmit = data => {
     setFormData(data);
   };
+
+  const postData = {
+    url: 'https://mindkeyz-api.herokuapp.com/api/contact',
+    method: 'post',
+    body: JSON.stringify(formData),
+    headers: JSON.stringify({ 'Content-Type': 'application/json' }),
+  };
+
+    // calling the useAxios custom hook
+    const { response, loading } = useAxios(postData, reset);
+    console.log(response)
 
   return (
     <div>
@@ -177,8 +191,10 @@ const Contact = () => {
                 </Stack>
               </Grid>
             </Grid>
+            {loading ? <CircularSpinner /> : ''}
           </Grid>
         </Grid>
+        <BasicModal />
       </Grid>
     </div>
   );
