@@ -21,7 +21,7 @@ import Carousel from '../components/home/Carousel'
 import banner from '../public/images/mindkeyzBanner2.webp'
 import {StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo  } from './styles/index.styles'
 import {StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon} from './styles/index.styles'
-import CountDownTimer from "../components/utility/countdownTimer";
+import CountDownTimer from "../components/utility/CountdownTimer";
 
 const Home = () => {
   const theme = useTheme();
@@ -43,15 +43,15 @@ const Home = () => {
           height='5123'
         />
         <StyledStack alignItems='center' justifyContent='center' md={6}>
-          {/* <StyledH4BannerTypo variant='h4' sx={{mb: '0.1em'}}>Best Dancehall & Afrobeats Online</StyledH4BannerTypo> */}
-          {/* <StyledH6BannerTypo variant='h6' sx={{mb: '1.5em'}}>We Provide The Keys To Your Musical Mind</StyledH6BannerTypo> */}
-          <StyledH4BannerTypo variant='h4' sx={{mb: '0.5em'}}>Big Christmas and new years sale!!!</StyledH4BannerTypo>
+          <StyledH4BannerTypo variant='h4' sx={{mb: '0.1em'}}>Best Dancehall & Afrobeats Online</StyledH4BannerTypo>
+          <StyledH6BannerTypo variant='h6' sx={{mb: '1.5em'}}>We Provide The Keys To Your Musical Mind</StyledH6BannerTypo>
+          {/* <StyledH4BannerTypo variant='h4' sx={{mb: '0.5em'}}>Big Christmas and new years sale!!!</StyledH4BannerTypo>
           <StyledH6BannerTypo variant='h4' sx={{mb: '1em'}}>50% off all license types!!!</StyledH6BannerTypo>
-          <CountDownTimer />
-          {/* <StyledBtn component={Link} href="#store" variant='contained' aria-label='scroll to beatstore'>
+          <CountDownTimer /> */}
+          <StyledBtn component={Link} href="#store" variant='contained' aria-label='scroll to beatstore'>
             <StyledShoppingCartIcon sx={{mr: '0.3em', fontSize: '1.2rem'}}/>
             Buy Beats
-          </StyledBtn> */}
+          </StyledBtn>
         </StyledStack>
       </Grid>
       <StyledGrid>

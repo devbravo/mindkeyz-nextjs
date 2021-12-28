@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import Head from "next/head";
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
 import {yupResolver} from '@hookform/resolvers/yup/dist/yup';
 import * as yup from 'yup';
@@ -7,6 +8,7 @@ import { styled } from "@mui/material/styles";
 import {useTheme, useMediaQuery} from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -14,9 +16,10 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import {StyledPageGrid} from './styles/pages.styles'
-import useAxios from '../hooks/useAxios'
-import CircularSpinner from '../components/utility/spinner';
-import BasicModal from '../components/utility/modal';
+import UseValidationErrors from '../hooks/useValidationErrors';
+import BasicModal from '../components/utility/Modal';
+import CircularSpinner from '../components/utility/Spinner';
+import { sendMail } from '../store/slices/form';
 
 // Schema validation
 const schema = yup.object().shape({
@@ -52,7 +55,7 @@ export const StyledBtn = styled(Button)(({theme}) => ({
 }))
 
 const Contact = () => {
-  const [formData, setFormData] = useState({});
+  const dispatch = useDispatch()
   const theme = useTheme()
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'))
 
@@ -65,19 +68,22 @@ const Contact = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = data => {
-    setFormData(data);
+    dispatch(sendMail(data))
   };
 
-  const postData = {
-    url: 'https://mindkeyz-api.herokuapp.com/api/contact',
-    method: 'post',
-    body: JSON.stringify(formData),
-    headers: JSON.stringify({ 'Content-Type': 'application/json' }),
-  };
+  // needed for loading a spinnner
+  const {loading} = useSelector(state => state.form)
 
-    // calling the useAxios custom hook
-    const { response, loading } = useAxios(postData, reset);
-    console.log(response)
+  // needed for knowing if a message has been send successfully
+  const {status} = useSelector(state => state.form.list.receivedResponse)
+  // if so reset the form inputs
+  useEffect(() => {
+    if(status === 'Success') {
+      reset()
+    }
+  }, [reset, status])
+
+  UseValidationErrors(setError)
 
   return (
     <div>
@@ -86,7 +92,7 @@ const Contact = () => {
         <meta name='description' content='We are ready to serve you.' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Grid item container sx={{backgroundColor: theme.palette.common.secondaryDark}} > 
+      <Grid item container sx={{backgroundColor: theme.palette.common.secondaryDark, height: 'auto'}} > 
         <StyledPageGrid item>
           <Typography align='center' color={theme.palette.common.tertiary} sx={{fontSize: '1.9em', fontWeight: 600}}>Get In Touch</Typography>
           <Typography variant='body1' align='center' color='text.secondary'>Let us know more about you!</Typography>
@@ -98,7 +104,7 @@ const Contact = () => {
               container
               justifyContent='center'
               component="form"
-              sx={{width: matchesSM ? '100%' : '65%', backgroundColor: '#1B1C1E', pt: '5em'}}
+              sx={{width: matchesSM ? '100%' : '65%', backgroundColor: '#1B1C1E', pt: matchesSM ? '2.5em' : '4.7em'}}
               noValidate
               autoComplete="off"
               onSubmit={handleSubmit(onSubmit)}
@@ -149,7 +155,7 @@ const Contact = () => {
                   {...register('email', {required: true})}
                 />
               </Grid> 
-              <Grid item container justifyContent='center' sx={{pb: '5em'}}>
+              <Grid item container justifyContent='center'>
                 <StyledTxtField
                   error={(typeof errors.message === 'object')}
                   sx={{'&.MuiTextField-root': {
@@ -165,10 +171,13 @@ const Contact = () => {
                 />
                 <StyledBtn variant="contained" sx={{mr: '1em'}} type='submit'>Send</StyledBtn>
               </Grid>
+              <Grid item container direction='column' justifyContent='center' alignItems='center' sx={{my: '1em'}}>
+                {loading ? <CircularSpinner/> : <Container sx={{width: '40px', height: '40px'}} />}
+              </Grid>
             </Grid>
             <Grid item container direction='column' alignItems='center' justifyContent='center' sx={{backgroundColor: '#1B1C1E', width: matchesSM ? '100%' : '35%'}}>
-              <Grid item container direction={matchesSM ? 'column' : 'row'} alignItems={matchesSM ? 'center' : 'flex-end'} sx={{color: '#fff', mb: matchesSM ? '2em' : '1em', mt: '-3em'}}>
-                <Grid item sx={{mr: '1em', }}><AccessTimeIcon/></Grid>
+              <Grid item container direction={matchesSM ? 'column' : 'row'} alignItems={matchesSM ? 'center' : 'flex-end'} sx={{color: '#fff', mb: matchesSM ? '2em' : '1em', mt: matchesSM ? 0 : '-3em'}}>
+                <Grid item sx={{mr: matchesSM ? 0 :'1em'}}><AccessTimeIcon/></Grid>
                 <Stack align={matchesSM ? 'center' : undefined}>
                   <Typography variant='body2' color='#545557' sx={{mb: '0.3em'}}>Opening Hours</Typography>
                   <Typography sx={{fontSize: '0.8em'}}>Monday - Saturday</Typography>
@@ -176,7 +185,7 @@ const Contact = () => {
                 </Stack>
               </Grid>
               <Grid item container direction={matchesSM ? 'column' : 'row'} alignItems={matchesSM ? 'center' : 'flex-end'} sx={{color: '#fff',mb: matchesSM ? '2em' : '1em'}}>
-                <Grid item sx={{mr: '1em', }}><LocationOnIcon/></Grid>
+                <Grid item sx={{mr: matchesSM ? 0 :'1em'}}><LocationOnIcon/></Grid>
                 <Stack align={matchesSM ? 'center' : undefined}>
                   <Typography variant='body2' color='#545557' sx={{mb: '0.3em'}}>Address</Typography>
                   <Typography sx={{fontSize: '0.8em'}}>Paramaribo, Suriname</Typography>
@@ -184,17 +193,16 @@ const Contact = () => {
                 </Stack>
               </Grid>
               <Grid item container direction={matchesSM ? 'column' : 'row'} alignItems={matchesSM ? 'center' : 'flex-end'} sx={{color: '#fff', mb: matchesSM ? '2em' : undefined}}>
-                <Grid item sx={{mr: '1em', }}><EmailIcon/></Grid>
+                <Grid item sx={{mr: matchesSM ? 0 :'1em'}}><EmailIcon/></Grid>
                 <Stack align={matchesSM ? 'center' : undefined}>
                   <Typography variant='body2' color='#545557' sx={{mb: '0.3em'}}>Support</Typography>
                   <Typography sx={{fontSize: '0.8em'}}>Mindkey@gmail.com</Typography>
                 </Stack>
               </Grid>
             </Grid>
-            {loading ? <CircularSpinner /> : ''}
           </Grid>
         </Grid>
-        <BasicModal />
+         <BasicModal />
       </Grid>
     </div>
   );

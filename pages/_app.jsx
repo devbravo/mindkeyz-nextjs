@@ -3,6 +3,7 @@ import styles from '../styles/globals.css'
 import Layout from "../components/layout/layout";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../components/theme/Theme";
+import { wrapper } from '../store/store';
 
 
 function MyApp({ Component, pageProps }) {
@@ -15,4 +16,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);
