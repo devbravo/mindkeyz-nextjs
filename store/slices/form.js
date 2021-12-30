@@ -6,7 +6,7 @@ const formSlice = createSlice({
   initialState: {
     list: {
       formData: {},
-      receivedResponse: {},
+      receivedResponse: {}, // Could be string 'Network Error' but reverts back to object
       receivedValidationErrors: []
     },
     loading: false,

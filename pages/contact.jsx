@@ -74,7 +74,7 @@ const Contact = () => {
   // needed for loading a spinnner
   const {loading} = useSelector(state => state.form)
 
-  // needed for knowing if a message has been send successfully
+  // Message been send succesfull?
   const {status} = useSelector(state => state.form.list.receivedResponse)
   // if so reset the form inputs
   useEffect(() => {
@@ -100,14 +100,14 @@ const Contact = () => {
         <Grid item container justifyContent='center' alignItems='center' sx={{mb: '10em', }}>
           <Grid item container direction={matchesSM ? 'column' : 'row'} md={8} sx={{boxShadow: '0px 3px 15px rgba(0,0,0,0.7)'}}>
             <Grid
+              component="form"
+              onSubmit={handleSubmit(onSubmit)}
               item
               container
               justifyContent='center'
-              component="form"
               sx={{width: matchesSM ? '100%' : '65%', backgroundColor: '#1B1C1E', pt: matchesSM ? '2.5em' : '4.7em'}}
               noValidate
               autoComplete="off"
-              onSubmit={handleSubmit(onSubmit)}
               >
               <Grid item container direction={matchesSM ? 'column' : 'row'} justifyContent='center' alignItems={matchesSM ? 'center' : undefined}>
                 <StyledTxtField

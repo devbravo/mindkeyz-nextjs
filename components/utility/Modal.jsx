@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
@@ -23,27 +23,23 @@ const style = {
   p: 4,
 };
 
-const BasicModal = ({reset}) => {
+const BasicModal = () => {
   const dispatch = useDispatch()
   const {receivedResponse} = useSelector(state => state.form.list)
   const open = useSelector(state => state.modal.value)
   const {receivedValidationErrors} = useSelector(state => state.form.list)
 
-  let disclaimer;
+  useEffect(() => {
+    // Don't open the modal if the errors are validation errors, Short circuit
+    if(receivedValidationErrors.length !== 0 
+      && receivedResponse !== 'Network Error') return
 
-  // Don't open the modal if the errors are validation erros
-  if(receivedValidationErrors.length !== 0) {
-    open = false
-  }
-  
-  // Check if the response object is not empty,
-  // if response is 'network error' add a disclaimer
-  else if(Object.keys(receivedResponse).length !== 0) {
-    dispatch(handleOpen(true))
-   if(receivedResponse === 'Network Error') {
-     disclaimer = 'This service is down for maintenance, sorry for the inconvenience.'
-   }
-  }
+    // Check if the response object is not empty,
+    // Checks for objects but also stings ('network error')
+    if(Object.keys(receivedResponse).length !== 0) {
+      dispatch(handleOpen(true))
+    }
+  }, [dispatch, receivedValidationErrors.length, receivedResponse])
 
   // Function for closing the modal
   const close = () => {
@@ -70,7 +66,7 @@ const BasicModal = ({reset}) => {
           </Typography>
             <Divider sx={{my: '1em'}} />
           <Typography id="modal-modal-description" variant='body1' sx={{mb: 2 }} color='text.secondary' align='center'>
-            {typeof(receivedResponse) === 'object' ? receivedResponse.resMessage : disclaimer}
+            {typeof(receivedResponse) === 'object' ? receivedResponse.resMessage : 'This service is down for maintenance, sorry for the inconvenience.'}
           </Typography>
           <Grid item container justifyContent='center'>
             <Button variant='outlined' onClick={close} sx={{fontSize: '1.1em'}}>OK</Button>
