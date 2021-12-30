@@ -17,8 +17,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import {StyledPageGrid} from './styles/pages.styles'
 import UseValidationErrors from '../hooks/useValidationErrors';
-import BasicModal from '../components/utility/Modal';
 import CircularSpinner from '../components/utility/Spinner';
+import ResponseModal from '../components/utility/Modal';
 import { sendMail } from '../store/slices/form';
 
 // Schema validation
@@ -202,7 +202,7 @@ const Contact = () => {
             </Grid>
           </Grid>
         </Grid>
-         <BasicModal />
+         <ResponseModal />
       </Grid>
     </div>
   );

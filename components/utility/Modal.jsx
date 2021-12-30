@@ -23,7 +23,7 @@ const style = {
   p: 4,
 };
 
-const BasicModal = () => {
+const ResponseModal = () => {
   const dispatch = useDispatch()
   const {receivedResponse} = useSelector(state => state.form.list)
   const open = useSelector(state => state.modal.value)
@@ -77,4 +77,4 @@ const BasicModal = () => {
   );
 }
 
-export default BasicModal
+export default ResponseModal

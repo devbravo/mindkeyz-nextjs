@@ -8,7 +8,7 @@ import ScrollTop from "../components/utility/ScrollToTop";
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import recordingStudio from '../public/images/studioRecording.jpeg'
+import recordingStudio from '../public/images/studioRecording.webp'
 import { StyledStack, StyledH4BannerTypo } from './styles/index.styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';

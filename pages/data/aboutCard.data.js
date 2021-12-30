@@ -1,7 +1,7 @@
-import Jordan from '../../public/images/studioJordan.jpeg'
-import Diego from '../../public/images/studioDiego.jpg'
-import Maschine from '../../public/images/studioMachine.jpg'
-import Keyboards from '../../public/images/studioKeyboards.jpg'
+import Jordan from '../../public/images/studioJordan.webp'
+import Diego from '../../public/images/studioDiego.webp'
+import Maschine from '../../public/images/studioMachine.webp'
+import Keyboards from '../../public/images/studioKeyboards.webp'
 
 const aboutCardData = [
   {

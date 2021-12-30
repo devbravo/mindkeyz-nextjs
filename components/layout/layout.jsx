@@ -6,6 +6,7 @@ import Footer from "../footer/Footer";
 export default function Layout({ children }) {
   const theme = useTheme()
   const matchesSM = useMediaQuery(theme.breakpoints.up('sm'))
+  
   return (
     <React.Fragment>
       <Header />

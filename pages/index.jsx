@@ -16,7 +16,7 @@ import DownloadIcon from "@mui/icons-material/DownloadRounded";
 import BeatStore from "../components/home/BeatStore";
 import LicenseCard from "../components/home/LicenseCard";
 import LicenseData from "../components/home/data/LicensingData";
-import FaqAccordion from "../components/home/Accordion";
+import FaqAccordion from "../components/home/FaqAccordion";
 import Carousel from '../components/home/Carousel'
 import banner from '../public/images/mindkeyzBanner2.webp'
 import {StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo  } from './styles/index.styles'
