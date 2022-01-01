@@ -1,11 +1,11 @@
-import Ambush from '../../../public/images/Ambush.webp';
-import Banks from '../../../public/images/Banks.webp';
-import Zerka from '../../../public/images/Zerka.webp';
-import Kwesi from '../../../public/images/Kwesi.webp';
-import Shatta from '../../../public/images/Shatta.webp';
-import Swanny from '../../../public/images/Swanny.webp';
-import Jahllano from '../../../public/images/Jahllano.webp';
-import Plumpy from '../../../public/images/Plumpy.webp';
+import Ambush from '../../../public/images/ambush.webp';
+import Banks from '../../../public/images/msBanks.webp';
+import Zerka from '../../../public/images/youngZerka.webp';
+import Kwesi from '../../../public/images/kwesiArthur.webp';
+import Shatta from '../../../public/images/shattaWale.webp';
+import Swanny from '../../../public/images/princeSwanny.webp';
+import Jahllano from '../../../public/images/jahllano.webp';
+import Plumpy from '../../../public/images/plumpyBoss.webp';
 
 // const Ambush = 'Ambush_f7us1y.webp';
 // const Banks = 'Banks_vpxpwe.webp';

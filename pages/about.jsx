@@ -97,13 +97,11 @@ const About = () => {
             >
             {aboutCardData.map(cardData => (
               <Card key={cardData.index} sx={{maxWidth: 250, mb: matchesMD ? '2em' : 0}}>
-                <CardMedia 
-                  component='img'
-                  height='140'
-                  image={cardData.image.src}
-                  alt={cardData.name + ' image'} />
+                <CardMedia>
+                  <Image src={cardData.image.src} alt={cardData.name + ' image'} height='190' width='250'/>
+                </CardMedia>
                 <CardContent>
-                  <Typography gutterBottom variant='h5' component='div' color='text.secondary'>
+                  <Typography gutterBottom variant='h6' component='div' color={theme.palette.common.tertiary}>
                     {cardData.headerText}
                   </Typography>
                   <Typography variant='paragraph2' color='text.secondary'>
@@ -116,7 +114,7 @@ const About = () => {
         </Grid>
           <Grid item container justifyContent='center'>
           <Stack align='center' sx={{ pt: matchesMD ? "2em" : "4em", mb: matchesMD ? "2em" : "4em" }}>
-            <Typography variant='h5' color={`${theme.palette.common.tertiary}`}>
+            <Typography variant='h5' color={theme.palette.common.tertiary}>
               Why We Do It
             </Typography>
             <Grid item md={6} sx={{mx: matchesMD ? '1.5em' : 'auto', mb: '2em'}}>

@@ -97,7 +97,7 @@ const Contact = () => {
           <Typography align='center' color={theme.palette.common.tertiary} sx={{fontSize: '1.9em', fontWeight: 600}}>Get In Touch</Typography>
           <Typography variant='body1' align='center' color='text.secondary'>Let us know more about you!</Typography>
         </StyledPageGrid>
-        <Grid item container justifyContent='center' alignItems='center' sx={{mb: '10em', }}>
+        <Grid item container justifyContent='center' alignItems='center' sx={{mb: '10em' }}>
           <Grid item container direction={matchesSM ? 'column' : 'row'} md={8} sx={{boxShadow: '0px 3px 15px rgba(0,0,0,0.7)'}}>
             <Grid
               component="form"

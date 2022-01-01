@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -12,13 +13,16 @@ const Carousel = ({ ...props }) => {
   return (
     <Card
       sx={{
-        maxWidth: 250,
+        maxWidth: 300,
         mb: "4em",
         mx: 'auto',
         color: theme.palette.common.tertiary,
         backgroundColor: theme.palette.common.secondaryDark,
+        borderRadius: '0.4em'
       }}>
-      <CardMedia component='img' height='200' image={props.image.src} alt={props.name} />
+      <CardMedia>
+        <Image src={props.image.src} alt={props.name} height='400' width='400'/>
+      </CardMedia>
       <CardContent>
         <Typography variant='body2' color='text.primary' align='left'>
           {`${props.name} - ${props.song}`}

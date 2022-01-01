@@ -30,7 +30,7 @@ const aboutCardData = [
     image: Keyboards,
     name: 'Keyboards',
     headerText: 'Modern Sound',
-    paragraphText: 'By stayin up to date with the ever changing musical landscape, Mindkeyz is able to stay relevent in the dancehall & afrobeat scene.'
+    paragraphText: 'By stayin up to date with the ever changing musical landscape, we stay relevant in the dancehall & afrobeat scene.'
   }
 ]
 

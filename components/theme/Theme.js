@@ -37,74 +37,74 @@ export default createTheme({
   },
   typography: {
     tab: {
-      fontFamily: 'sans-serif' ,
+      fontFamily: 'Lato',
       fontWeight: 900,
       fontSize: "0.75rem",
       letterSpacing: "1px",
     },
     h1: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'Lato',
       color: secondary,
       lineHeight: 1.5,
       letterSpacing: 1.3,
       // fontSize: '6rem'
     },
     h2: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'Lato',
       color: secondary,
       fontWeight: 700,
       letterSpacing: 1.3,
       // fontSize: '3.75rem'
     },
     h3: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'Lato',
       color: secondary,
       fontWeight: 600,
       letterSpacing: 1.3,
       // fontSize: '3rem'
     },
     h4: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'Lato',
       color: secondary,
       fontWeight: 600,
       letterSpacing: 1.3,
       fontSize: '2.50rem'
     },
     h5: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'Lato',
       color: secondary,
       fontWeight: 600,
       letterSpacing: 1.3,
       // fontSize: '1.5rem'
     },
     h6: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'Lato',
       color: secondary,
       fontWeight: 700,
       letterSpacing: 1.3,
       fontSize: '1.25rem'
     },
     body1: {
-      fontFamily: 'sans-serif',
+      fontFamily: 'Lato',
       // fontWeight: 600,
       letterSpacing: 1.3
       // fontSize: '1rem'
      },
      body2: {
-       fontFamily: 'sans-serif',
+       fontFamily: 'Lato',
        letterSpacing: 1.3,
        fontWeight: 400
        // fontSize: '0.875rem'
      },
      paragraph1: {
-       fontFamily: 'Raleway',
+      //  fontFamily: 'Raleway',
        fontWeight: 400,
        fontSize: '1.25rem',
        letterSpacing: 1.3,
        lineHeight: 1.6
      },
      paragraph2: {
-       fontFamily: 'Raleway',
+      //  fontFamily: 'Raleway',
        fontWeight: 500,
        fontSize: '0.875rem',
        letterSpacing: 1.3,

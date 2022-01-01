@@ -21,6 +21,7 @@ const FaqAccordion = () => {
                 backgroundColor: theme.palette.common.tertiary,
                 pt: "1em",
                 pb: "1em",
+               
               }}
               expandIcon={<ExpandMoreIcon sx={{ color: theme.palette.primary.main }} />}
               aria-controls='panel1a-contetn'

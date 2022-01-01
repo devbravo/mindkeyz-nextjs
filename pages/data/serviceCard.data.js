@@ -22,7 +22,7 @@ const ServicesData = [
     index: 2,
     service: 'Video Consultation',
     icon: <VideocamIcon sx={{color: "#6600ff", fontSize: '40px' }} />,
-    info: `Want to start an online beat selling business, but don't know how? We have over 6 years of experience. Hit us up!`
+    info: `Want to start an online beat selling business, but don't know how? We have over 6 years of experience.`
   },
   {
     index: 3,
@@ -40,7 +40,7 @@ const ServicesData = [
     index: 5,
     service: 'Artworks',
     icon: <PhotoIcon sx={{color: "#6600ff", fontSize: '40px'}} />,
-    info: `Artworks are essential in this age of streaming. Whether you releasing an album or single. We've got you covered.`
+    info: `Artworks are essential in this age of streaming. Whether you releasing an album or single. We've got you!.`
   }
 ];
 

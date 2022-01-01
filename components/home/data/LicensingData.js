@@ -1,6 +1,6 @@
 const LicenseData = [
   {
-    licenseName: "basic",
+    licenseName: "BASIC",
     price: "$30",
     deal: "Buy 2 get 1 free",
     pdf: "/contracts/Basic-License-Agreement.pdf",
@@ -15,7 +15,7 @@ const LicenseData = [
     ],
   },
   {
-    licenseName: "premium",
+    licenseName: "PREMIUM",
     price: "$50",
     deal: "Buy 2 get 1 free",
     pdf: "/contracts/Premium-License-Agreement.pdf",
@@ -30,7 +30,7 @@ const LicenseData = [
     ],
   },
   {
-    licenseName: "ultimate",
+    licenseName: "ULTIMATE",
     price: "$150",
     deal: "Buy 2 get 1 free",
     pdf: "/contracts/Ultimate-License-Agreement.pdf",
@@ -45,7 +45,7 @@ const LicenseData = [
     ],
   },
   {
-    licenseName: "exclusive",
+    licenseName: "EXCLUSIVE",
     price: "$500+",
     deal: "---",
     pdf: "/contracts/Exclusive-Rights-Agreement.pdf",

@@ -16,6 +16,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   width: "89%",
   marginLeft: 0,
   marginBottom: "2em",
+  borderRadius: '0.4em',
   [theme.breakpoints.between("sm", "md")]: {
     width: "40%",
     marginLeft: "1.5em",
@@ -39,9 +40,9 @@ const LicenseCard = ({ ...props }) => {
         align='center'
         title={
           <Typography
-            variant='h6'
-            color={`${theme.palette.common.mindPurpLight}`}
-            sx={{ mt: "0.5em", textTransform: "uppercase" }}>
+            variant='h5'
+            color={`${theme.palette.primary.main}`}
+            sx={{ mt: "0.5em" }}>
             {props.licenseName}
           </Typography>
         }

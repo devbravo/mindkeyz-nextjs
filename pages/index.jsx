@@ -18,7 +18,7 @@ import LicenseCard from "../components/home/LicenseCard";
 import LicenseData from "../components/home/data/LicensingData";
 import FaqAccordion from "../components/home/FaqAccordion";
 import Carousel from '../components/home/Carousel'
-import banner from '../public/images/mindkeyzBanner2.webp'
+import banner from '../public/images/mindkeyzBanner.webp'
 import {StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo  } from './styles/index.styles'
 import {StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon} from './styles/index.styles'
 import CountDownTimer from "../components/utility/CountdownTimer";
@@ -35,7 +35,7 @@ const Home = () => {
       <Grid container sx={{position: 'relative'}}>
         <Image
           src={banner}
-          alt='company logo'
+          alt='studio banner'
           quality={100} 
           priority
           placeholder='blur'
