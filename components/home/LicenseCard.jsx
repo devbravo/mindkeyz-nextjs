@@ -13,7 +13,7 @@ import ListItemText from "@mui/material/ListItemText";
 
 
 const StyledCard = styled(Card)(({ theme }) => ({
-  width: "89%",
+  width: "73%",
   marginLeft: 0,
   marginBottom: "2em",
   borderRadius: '0.4em',

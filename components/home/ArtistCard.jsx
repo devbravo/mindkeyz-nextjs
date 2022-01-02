@@ -30,7 +30,7 @@ const Carousel = ({ ...props }) => {
       </CardContent>
       <CardActions sx={{ color: theme.palette.common.tertiary, backgroundColor: theme.palette.common.secondaryDark }}>
         <Button size='small' color='primary'>
-          <a href='dfdf' target='_blank' rel='noreferrer'>
+          <a href={props.url} target='_blank' rel='noreferrer'>
             Listen
           </a>
         </Button>

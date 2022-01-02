@@ -20,11 +20,11 @@ export const ToolbarMargin = styled("div")(({ theme }) => ({
 export const StyledTab = styled(Tab)(({ theme }) => ({
   ...theme.typography.tab,
   minWidth: 10,
-  color: "#fff",
+  color: '#fff',
   padding: "16px 6px",
   margin: "0px 5px",
   "&.Mui-selected": {
-    color: "#fff",
+    color: theme.palette.primary.main,
   },
 }));
 
@@ -32,6 +32,7 @@ export const StyledBtn = styled(Button)(({ theme }) => ({
   width: "10em",
   height: "1.9em",
   position: "absolute",
+  color: '#fff',
   top: "1.5em",
   left: "4em",
   [theme.breakpoints.down("md")]: {

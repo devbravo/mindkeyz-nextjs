@@ -16,7 +16,7 @@ const aboutCardData = [
     image: Diego,
     name: 'Diego',
     headerText: 'Persistence',
-    paragraphText: 'Whether you wanna make it big in any profession, having persistence will carry you through when the going gets though. '
+    paragraphText: 'If you wanna make it big in any profession, having persistence will carry you through when the going gets though. '
   },
   {
     index: 2,

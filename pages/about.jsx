@@ -96,9 +96,9 @@ const About = () => {
             alignItems='flex-end'
             >
             {aboutCardData.map(cardData => (
-              <Card key={cardData.index} sx={{maxWidth: 250, mb: matchesMD ? '2em' : 0}}>
+              <Card key={cardData.index} sx={{maxWidth: 300, mb: matchesMD ? '2em' : 0, borderRadius: '0.4em'}}>
                 <CardMedia>
-                  <Image src={cardData.image.src} alt={cardData.name + ' image'} height='190' width='250'/>
+                  <Image src={cardData.image.src} alt={cardData.name + ' image'} height='350' width='400'/>
                 </CardMedia>
                 <CardContent>
                   <Typography gutterBottom variant='h6' component='div' color={theme.palette.common.tertiary}>

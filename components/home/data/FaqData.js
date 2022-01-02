@@ -20,19 +20,19 @@ export const FaqData1 = [
 
 export const FaqData2 = [
   {
-    index: 0,
+    index: 3,
     question: `How long before I receive my beat?`,
     answer:
       "It depends on the payment method. With PayPal you receive a download link instantly, otherwise we have to send it manually which may take some time.",
   },
   {
-    index: 1,
+    index: 4,
     question: "Is the beat removed after purchase?",
     answer:
       "If you paid for a non-exclusive license, then no. If a exclusive license is sold, the instrumental(s) will be removed.",
   },
   {
-    index: 2,
+    index: 5,
     question: `If exclusive rights are sold is my license still valid?`,
     answer: `By purchasing a non-exclusive license you receive a digital agreement that protects you for a period up to 2 years. If those two years have passed, either upgrade your license or extend it per year by paying $20.`,
   },
