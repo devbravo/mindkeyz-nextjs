@@ -1,5 +1,4 @@
 import * as React from "react";
-import Head from "next/head";
 import { useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";

@@ -21,7 +21,7 @@ import Carousel from "../components/home/Carousel";
 import banner from "../public/images/mindkeyzBanner.webp";
 import { StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo } from "./styles/index.styles";
 import { StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon } from "./styles/index.styles";
-import CountDownTimer from "../components/utility/CountdownTimer";
+// import CountDownTimer from "../components/utility/CountdownTimer";
 
 const Home = () => {
   const theme = useTheme();

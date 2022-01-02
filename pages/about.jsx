@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import { styled } from "@mui/material/styles";
 import { useTheme, useMediaQuery } from "@mui/material";
