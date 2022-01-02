@@ -1,11 +1,11 @@
-import Ambush from "../../../public/images/ambush.webp";
-import Banks from "../../../public/images/msBanks.webp";
-import Zerka from "../../../public/images/youngZerka.webp";
-import Kwesi from "../../../public/images/kwesiArthur.webp";
-import Shatta from "../../../public/images/shattaWale.webp";
-import Swanny from "../../../public/images/princeSwanny.webp";
-import Jahllano from "../../../public/images/jahllano.webp";
-import Plumpy from "../../../public/images/plumpyBoss.webp";
+import Ambush from "../../public/images/ambush.webp";
+import Banks from "../../public/images/msBanks.webp";
+import Zerka from "../../public/images/youngZerka.webp";
+import Kwesi from "../../public/images/kwesiArthur.webp";
+import Shatta from "../../public/images/shattaWale.webp";
+import Swanny from "../../public/images/princeSwanny.webp";
+import Jahllano from "../../public/images/jahllano.webp";
+import Plumpy from "../../public/images/plumpyBoss.webp";
 
 const ArtistData = [
   {

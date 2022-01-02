@@ -3,8 +3,8 @@ import { useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import serviceData from "./data/serviceCard.data";
-import { StyledPageGrid } from "./styles/pages.styles";
+import serviceData from "../data/service/ServiceCard";
+import { StyledPageGrid } from "../styles/global";
 import SEO from "../components/utility/SEO";
 
 const Services = () => {

@@ -2,7 +2,7 @@ import { useTheme, useMediaQuery } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import ArtistCard from "./ArtistCard";
-import ArtistData from "./data/ArtistData";
+import ArtistData from "../../data/artist/Artist";
 
 // Import Swiper styles
 import "swiper/css";

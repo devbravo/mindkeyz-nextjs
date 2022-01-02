@@ -8,15 +8,15 @@ import { Toolbar, Grid } from "@mui/material";
 import { List, ListItemIcon } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { routes } from "./data/Header.Data";
-import { socials, socialsMobile } from "./data/Social.Data";
-import { StyledTab, StyledIconCont, StyledSwipeableDrawer, StyledIconButton } from "./styles/HeaderDrawer.styles";
-import { StyledBtn, StyledAppBar } from "./styles/HeaderDrawer.styles";
-import { ToolbarMargin, StyledListItem, StyledListItemText } from "./styles/HeaderDrawer.styles";
+import { routes } from "../../data/navigation/Navigation";
+import { socials, socialsMobile } from "../../data/navigation/Social";
+import { StyledTab, StyledIconCont, StyledSwipeableDrawer, StyledIconButton } from "../../styles/navigation/Navigation";
+import { StyledBtn, StyledAppBar } from "../../styles/navigation/Navigation";
+import { ToolbarMargin, StyledListItem, StyledListItemText } from "../../styles/navigation/Navigation";
 import logo from "../../public/images/Mindkeyz-Logo_Trans-White.webp";
 import ElevationScroll from "../utility/ElevationScroll";
 
-const Header = () => {
+const Navigation = () => {
   const [value, setValue] = useState(0);
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -137,4 +137,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navigation;

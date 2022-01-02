@@ -15,12 +15,12 @@ import CreditCardIcon from "@mui/icons-material/CreditCardRounded";
 import DownloadIcon from "@mui/icons-material/DownloadRounded";
 import BeatStore from "../components/home/BeatStore";
 import LicenseCard from "../components/home/LicenseCard";
-import LicenseData from "../components/home/data/LicensingData";
+import LicenseData from "../data/licensing/Licensing";
 import FaqAccordion from "../components/home/FaqAccordion";
 import Carousel from "../components/home/Carousel";
 import banner from "../public/images/mindkeyzBanner.webp";
-import { StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo } from "./styles/index.styles";
-import { StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon } from "./styles/index.styles";
+import { StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo } from "../styles/home/Index";
+import { StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon } from "../styles/home/Index";
 // import CountDownTimer from "../components/utility/CountdownTimer";
 
 const Home = () => {

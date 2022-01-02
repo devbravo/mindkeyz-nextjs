@@ -6,7 +6,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { FaqData1, FaqData2 } from "./data/FaqData";
+import { FaqData1, FaqData2 } from "../../data/faq/Faq";
 import Grid from "@mui/material/Grid";
 
 const FaqAccordion = () => {

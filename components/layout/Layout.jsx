@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
-import Header from "../header/Header";
+import Header from "../navigation/Navigation";
 import Footer from "../footer/Footer";
 
 const Layout = ({ children }) => {

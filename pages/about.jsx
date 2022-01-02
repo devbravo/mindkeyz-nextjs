@@ -8,11 +8,11 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import recordingStudio from "../public/images/studioRecording.webp";
-import { StyledStack, StyledH4BannerTypo } from "./styles/index.styles";
+import { StyledStack, StyledH4BannerTypo } from "../styles/home/Index";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import aboutCardData from "./data/aboutCard.data";
+import aboutCardData from "../data/about/AboutCard";
 import SEO from "../components/utility/SEO";
 
 export const StyledParagraph1Typo = styled(Typography)(({ theme }) => ({

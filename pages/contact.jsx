@@ -14,7 +14,7 @@ import Button from "@mui/material/Button";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { StyledPageGrid } from "./styles/pages.styles";
+import { StyledPageGrid } from "../styles/global";
 import UseValidationErrors from "../hooks/useValidationErrors";
 import CircularSpinner from "../components/utility/Spinner";
 import ResponseModal from "../components/utility/Modal";
