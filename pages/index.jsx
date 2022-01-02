@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link  from '../components/utility/Link'
+import Link from "../components/utility/Link";
 import { useTheme, useMediaQuery } from "@mui/material";
 import SEO from "../components/utility/SEO";
 import Typography from "@mui/material/Typography";
@@ -17,10 +17,10 @@ import BeatStore from "../components/home/BeatStore";
 import LicenseCard from "../components/home/LicenseCard";
 import LicenseData from "../components/home/data/LicensingData";
 import FaqAccordion from "../components/home/FaqAccordion";
-import Carousel from '../components/home/Carousel'
-import banner from '../public/images/mindkeyzBanner.webp'
-import {StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo  } from './styles/index.styles'
-import {StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon} from './styles/index.styles'
+import Carousel from "../components/home/Carousel";
+import banner from "../public/images/mindkeyzBanner.webp";
+import { StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo } from "./styles/index.styles";
+import { StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon } from "./styles/index.styles";
 import CountDownTimer from "../components/utility/CountdownTimer";
 
 const Home = () => {
@@ -30,26 +30,27 @@ const Home = () => {
 
   return (
     <div>
-      <SEO />
+      <SEO
+        title='Mindkeyz | Buy dancehall & afrobeats online'
+        description='description'
+        siteTitle='Purchase & Download Beats Online. Download beats from a hit-making music producer duo. 
+                    Mindkeyz brings you more than 250+ dancehall, afrobeat and trap instrumentals.'
+      />
       <div id='back-to-top-anchor' style={{ marginTop: matchesMD ? "4em" : "3.2em" }} />
-      <Grid container sx={{position: 'relative'}}>
-        <Image
-          src={banner}
-          alt='studio banner'
-          quality={100} 
-          priority
-          placeholder='blur'
-          width='8996'
-          height='5123'
-        />
+      <Grid container sx={{ position: "relative" }}>
+        <Image src={banner} alt='studio banner' quality={100} priority placeholder='blur' width='8996' height='5123' />
         <StyledStack alignItems='center' justifyContent='center' md={6}>
-          <StyledH4BannerTypo variant='h4' sx={{mb: '0.1em'}}>Best Dancehall & Afrobeats Online</StyledH4BannerTypo>
-          <StyledH6BannerTypo variant='h6' sx={{mb: '1.5em'}}>We Provide The Keys To Your Musical Mind</StyledH6BannerTypo>
+          <StyledH4BannerTypo variant='h4' sx={{ mb: "0.1em" }}>
+            Best Dancehall & Afrobeats Online
+          </StyledH4BannerTypo>
+          <StyledH6BannerTypo variant='h6' sx={{ mb: "1.5em" }}>
+            We Provide The Keys To Your Musical Mind
+          </StyledH6BannerTypo>
           {/* <StyledH4BannerTypo variant='h4' sx={{mb: '0.5em'}}>Big Christmas and new years sale!!!</StyledH4BannerTypo>
           <StyledH6BannerTypo variant='h4' sx={{mb: '1em'}}>50% off all license types!!!</StyledH6BannerTypo>
           <CountDownTimer /> */}
-          <StyledBtn component={Link} href="#store" variant='contained' aria-label='scroll to beatstore'>
-            <StyledShoppingCartIcon sx={{mr: '0.3em', fontSize: '1.2rem'}}/>
+          <StyledBtn component={Link} href='#store' variant='contained' aria-label='scroll to beatstore'>
+            <StyledShoppingCartIcon sx={{ mr: "0.3em", fontSize: "1.2rem" }} />
             Buy Beats
           </StyledBtn>
         </StyledStack>
@@ -62,8 +63,7 @@ const Home = () => {
           wrap={matchesSMMD ? "wrap" : "nowrap"}
           justifyContent='space-evenly'
           alignItems={matchesMD ? "flex-start" : "center"}
-          sx={{pb: matchesMD ? '6em' : '4em'}}
-          >
+          sx={{ pb: matchesMD ? "6em" : "4em" }}>
           <Grid align='center' sx={{ pb: matchesMD ? undefined : "1.3em" }}>
             <LibraryMusicIcon sx={{ fontSize: matchesMD ? "2.3em" : "1.5em" }} />
             <StyledH6Typo variant='h6'>1. Select Beat</StyledH6Typo>

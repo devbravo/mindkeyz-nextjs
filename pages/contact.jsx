@@ -20,6 +20,7 @@ import UseValidationErrors from "../hooks/useValidationErrors";
 import CircularSpinner from "../components/utility/Spinner";
 import ResponseModal from "../components/utility/Modal";
 import { sendMail } from "../store/slices/form";
+import SEO from "../components/utility/SEO";
 
 // Schema validation
 const schema = yup.object().shape({
@@ -87,11 +88,11 @@ const Contact = () => {
 
   return (
     <div>
-      <Head>
-        <title>Mindkeyz | Contact us for info on licenses and beats</title>
-        <meta name='description' content='We are ready to serve you.' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <SEO
+        title='Mindkeyz | Contact us for info on licenses and beats'
+        description='description'
+        siteTitle='Hit us up for custom beats or just to say hi.'
+      />
       <Grid item container sx={{ backgroundColor: theme.palette.common.secondaryDark, height: "auto" }}>
         <StyledPageGrid item>
           <Typography align='center' color={theme.palette.common.tertiary} sx={{ fontSize: "1.9em", fontWeight: 600 }}>
