@@ -5,7 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "../components/theme/Theme";
 import { wrapper } from "../store/store";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
@@ -13,6 +13,6 @@ function MyApp({ Component, pageProps }) {
       </Layout>
     </ThemeProvider>
   );
-}
+};
 
 export default wrapper.withRedux(MyApp);
