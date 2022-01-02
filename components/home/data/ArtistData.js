@@ -39,13 +39,13 @@ const ArtistData = [
     song_link: "https://www.youtube.com/watch?v=hUd_uN7Gkpc",
     image: Banks,
   },
-  {
-    index: 3,
-    name: "Ambush",
-    song: "My Size",
-    song_link: "https://www.youtube.com/watch?v=hUd_uN7Gkpc",
-    image: Ambush,
-  },
+  // {
+  //   index: 3,
+  //   name: "Ambush",
+  //   song: "My Size",
+  //   song_link: "https://www.youtube.com/watch?v=hUd_uN7Gkpc",
+  //   image: Ambush,
+  // },
   {
     index: 4,
     name: "Prince Swanny",
@@ -61,13 +61,13 @@ const ArtistData = [
     image: Shatta,
   },
 
-  {
-    index: 6,
-    name: "Jahllano",
-    song: "War Dem Want",
-    song_link: "https://www.youtube.com/watch?v=ifMblIZrALo",
-    image: Jahllano,
-  },
+  // {
+  //   index: 6,
+  //   name: "Jahllano",
+  //   song: "War Dem Want",
+  //   song_link: "https://www.youtube.com/watch?v=ifMblIZrALo",
+  //   image: Jahllano,
+  // },
   {
     index: 7,
     name: "Young Zerka",
