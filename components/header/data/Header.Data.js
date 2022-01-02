@@ -12,19 +12,19 @@ export const routes = [
   },
   {
     name: "Services",
-    url: "/Services",
+    url: "/services",
     activeIndex: 1,
     icon: <HomeRepairServiceIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
   },
   {
     name: "About",
-    url: "/About",
+    url: "/about",
     activeIndex: 2,
     icon: <InfoIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
   },
   {
     name: "Contact",
-    url: "/Contact",
+    url: "/contact",
     activeIndex: 3,
     icon: <AttachEmailIcon sx={{ color: "#fff", width: "0.90em", height: "0.90em" }} />,
   },
