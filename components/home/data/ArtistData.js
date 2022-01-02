@@ -1,20 +1,11 @@
-// import Ambush from "../../../public/images/ambush.webp";
+import Ambush from "../../../public/images/ambush.webp";
 import Banks from "../../../public/images/msBanks.webp";
 import Zerka from "../../../public/images/youngZerka.webp";
 import Kwesi from "../../../public/images/kwesiArthur.webp";
 import Shatta from "../../../public/images/shattaWale.webp";
 import Swanny from "../../../public/images/princeSwanny.webp";
-// import Jahllano from "../../../public/images/jahllano.webp";
+import Jahllano from "../../../public/images/jahllano.webp";
 import Plumpy from "../../../public/images/plumpyBoss.webp";
-
-// const Ambush = 'Ambush_f7us1y.webp';
-// const Banks = 'Banks_vpxpwe.webp';
-// const Zerka = 'Zerka_zwhgvy.webp';
-// const Kwesi = 'Kwesi_u7j5rk.webp';
-// const Shatta = 'Shatta_y0btyc.webp';
-// const Swanny = 'Swanny_vo7zza.webp';
-// const Jahllano = 'Jahllano_gdymon.webp';
-// const Plumpy = 'Plumpy_kmu4xn.webp';
 
 const ArtistData = [
   {
@@ -39,13 +30,13 @@ const ArtistData = [
     song_link: "https://www.youtube.com/watch?v=hUd_uN7Gkpc",
     image: Banks,
   },
-  // {
-  //   index: 3,
-  //   name: "Ambush",
-  //   song: "My Size",
-  //   song_link: "https://www.youtube.com/watch?v=hUd_uN7Gkpc",
-  //   image: Ambush,
-  // },
+  {
+    index: 3,
+    name: "Ambush",
+    song: "My Size",
+    song_link: "https://www.youtube.com/watch?v=hUd_uN7Gkpc",
+    image: Ambush,
+  },
   {
     index: 4,
     name: "Prince Swanny",
@@ -60,14 +51,13 @@ const ArtistData = [
     song_link: "https://www.youtube.com/watch?v=eATr3r-3XVs",
     image: Shatta,
   },
-
-  // {
-  //   index: 6,
-  //   name: "Jahllano",
-  //   song: "War Dem Want",
-  //   song_link: "https://www.youtube.com/watch?v=ifMblIZrALo",
-  //   image: Jahllano,
-  // },
+  {
+    index: 6,
+    name: "Jahllano",
+    song: "War Dem Want",
+    song_link: "https://www.youtube.com/watch?v=ifMblIZrALo",
+    image: Jahllano,
+  },
   {
     index: 7,
     name: "Young Zerka",
