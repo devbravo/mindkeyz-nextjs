@@ -106,7 +106,7 @@ const Navigation = () => {
           ))}
         </Grid>
       </StyledSwipeableDrawer>
-      <StyledIconButton onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
+      <StyledIconButton onClick={() => setOpenDrawer(!openDrawer)} disableRipple aria-label='main menu'>
         {!openDrawer ? (
           <MenuRoundedIcon sx={{ height: "36px", width: "36px", color: "#fff" }} />
         ) : (

@@ -21,8 +21,8 @@ const Footer = () => {
       </Grid>
       <Grid item container justifyContent='center'>
         <StyledBox component='form' noValidate autoComplete='off'>
-          <StyledTxtField id='filled-basic' label='Name' variant='filled' size='small' disabled />
-          <StyledTxtField id='filled-basic' label='Email' variant='filled' size='small' disabled />
+          <StyledTxtField id='filled-basic-name' label='Name' variant='filled' size='small' disabled />
+          <StyledTxtField id='filled-basic-email' label='Email' variant='filled' size='small' disabled />
           <StyledBtn variant='contained'>Subscribe</StyledBtn>
         </StyledBox>
       </Grid>

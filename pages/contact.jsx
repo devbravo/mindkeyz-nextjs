@@ -125,7 +125,7 @@ const Contact = () => {
                 alignItems={matchesSM ? "center" : undefined}>
                 <StyledTxtField
                   error={typeof errors.firstName === "object"}
-                  id='filled-multiline-flexible'
+                  id='filled-multiline-flexible-firstname'
                   label={matchesSM ? "Name" : "First Name"}
                   multiline
                   variant='filled'
@@ -137,7 +137,7 @@ const Contact = () => {
                   ""
                 ) : (
                   <StyledTxtField
-                    id='filled-multiline-flexible'
+                    id='filled-multiline-flexible-lastname'
                     label='Last Name'
                     multiline
                     variant='filled'
@@ -155,7 +155,7 @@ const Contact = () => {
                 alignItems={matchesSM ? "center" : undefined}>
                 <StyledTxtField
                   error={typeof errors.subject === "object"}
-                  id='filled-multiline-flexible'
+                  id='filled-multiline-flexible-object'
                   label='Subject'
                   multiline
                   variant='filled'
@@ -165,7 +165,7 @@ const Contact = () => {
                 />
                 <StyledTxtField
                   error={typeof errors.email === "object"}
-                  id='filled-multiline-flexible'
+                  id='filled-multiline-flexible-email'
                   label='Email'
                   multiline
                   variant='filled'
@@ -182,7 +182,7 @@ const Contact = () => {
                       width: matchesSM ? "63%" : "73%",
                     },
                   }}
-                  id='filled-multiline-static'
+                  id='filled-multiline-static-message'
                   label='Message'
                   multiline
                   variant='filled'
@@ -216,7 +216,7 @@ const Contact = () => {
                   <AccessTimeIcon />
                 </Grid>
                 <Stack align={matchesSM ? "center" : undefined}>
-                  <Typography variant='body2' color='#545557' sx={{ mb: "0.3em" }}>
+                  <Typography variant='body2' color='#6a6b6e' sx={{ mb: "0.3em" }}>
                     Opening Hours
                   </Typography>
                   <Typography sx={{ fontSize: "0.8em" }}>Monday - Saturday</Typography>
@@ -233,7 +233,7 @@ const Contact = () => {
                   <LocationOnIcon />
                 </Grid>
                 <Stack align={matchesSM ? "center" : undefined}>
-                  <Typography variant='body2' color='#545557' sx={{ mb: "0.3em" }}>
+                  <Typography variant='body2' color='#6a6b6e' sx={{ mb: "0.3em" }}>
                     Address
                   </Typography>
                   <Typography sx={{ fontSize: "0.8em" }}>Paramaribo, Suriname</Typography>
@@ -250,7 +250,7 @@ const Contact = () => {
                   <EmailIcon />
                 </Grid>
                 <Stack align={matchesSM ? "center" : undefined}>
-                  <Typography variant='body2' color='#545557' sx={{ mb: "0.3em" }}>
+                  <Typography variant='body2' color='#6a6b6e' sx={{ mb: "0.3em" }}>
                     Support
                   </Typography>
                   <Typography sx={{ fontSize: "0.8em" }}>Mindkey@gmail.com</Typography>
