@@ -31,10 +31,10 @@ const Home = () => {
   return (
     <div>
       <SEO
-        title='Mindkeyz | Buy dancehall & afrobeats online'
+        title='Mindkeyz | Buy dancehall & afrobeats online for as low as $30'
         description='description'
         siteTitle='Purchase & Download Beats Online. Download beats from a hit-making music producer duo. 
-                    Mindkeyz brings you more than 250+ dancehall, afrobeat and trap instrumentals.'
+                    Mindkeyz brings you more than 300+ dancehall, afrobeat and trap instrumentals.'
       />
       <div id='back-to-top-anchor' style={{ marginTop: matchesMD ? "4em" : "3.2em" }} />
       <Grid container sx={{ position: "relative" }}>

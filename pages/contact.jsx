@@ -88,9 +88,9 @@ const Contact = () => {
   return (
     <div>
       <SEO
-        title='Mindkeyz | Contact us for info on licenses and beats'
+        title='Mindkeyz | Contact us for info on instrumentals, beat licensing and beat hosting on our YouTube channel.'
         description='description'
-        siteTitle='Hit us up for custom beats or just to say hi.'
+        siteTitle='Hit us up for custom dancehall & afobeats, beat hosting on YouTube or just to say hi.'
       />
       <Grid item container sx={{ backgroundColor: theme.palette.common.secondaryDark, height: "auto" }}>
         <StyledPageGrid item>

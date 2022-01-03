@@ -42,7 +42,7 @@ const About = () => {
   return (
     <div>
       <SEO
-        title='Mindkeyz | Learn who whe are, what we do and why we do it.'
+        title='Mindkeyz | Learn who whe are, what we do and why we do it | Making the hottest dancehall & afrobeats!'
         description='description'
         siteTitle='Mindkeyz a music production company from Paramaribo, Suriname'
       />

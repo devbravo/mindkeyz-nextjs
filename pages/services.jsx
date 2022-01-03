@@ -13,9 +13,9 @@ const Services = () => {
   return (
     <div>
       <SEO
-        title='Mindkeyz | Mixing & Master, Custom Beats, Beat Hosting.'
+        title='Mindkeyz | Mix & Master, Custom Beats, Beat Hosting, promotion, artworks and consultation.'
         description='description'
-        siteTitle='We offer a range of musical services.'
+        siteTitle='We offer a range of services for your musical needs.'
       />
       <Grid item container sx={{ backgroundColor: theme.palette.common.secondaryDark }}>
         <StyledPageGrid item align='center'>
