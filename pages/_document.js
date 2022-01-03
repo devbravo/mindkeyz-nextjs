@@ -18,7 +18,7 @@ class MyDocument extends Document {
             rel='prefetch'
             href='https://Mindkeyz.infinity.airbit.com?config_id=8072&embed=1'
             as='audio'
-            crossOrigin></link>
+            crossOrigin='true'></link>
         </Head>
         <body>
           <Main />
