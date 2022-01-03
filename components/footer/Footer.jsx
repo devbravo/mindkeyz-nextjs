@@ -65,7 +65,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       <StyledGridCopy item container justifyContent='center'>
-        <StyledAddressTyp variant='body2'>&copy; 2022 Mindkeyz.com | Created By Mindkeyz</StyledAddressTyp>
+        <StyledAddressTyp variant='body1'>&copy; 2022 Mindkeyz.com | Created By Mindkeyz</StyledAddressTyp>
       </StyledGridCopy>
     </StyledFooter>
   );
