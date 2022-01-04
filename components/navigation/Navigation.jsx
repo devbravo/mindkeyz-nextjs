@@ -48,7 +48,14 @@ const Navigation = () => {
     <React.Fragment>
       <Tabs value={value} onChange={handleChange} sx={{ ml: "auto", mr: "auto" }} aria-label='navigation links'>
         {routes.map((route, index) => (
-          <StyledTab key={index} component={Link} href={route.url} label={route.name} />
+          <StyledTab
+            role='tab'
+            key={index}
+            component={Link}
+            href={route.url}
+            label={route.name}
+            aria-controls={`tab-${index}`}
+          />
         ))}
       </Tabs>
       <StyledIconCont>
