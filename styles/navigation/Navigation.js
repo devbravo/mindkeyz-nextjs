@@ -26,6 +26,10 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
   "&.Mui-selected": {
     color: "#fff",
   },
+  ".MuiTouchRipple-root": {
+    color: theme.palette.primary.main,
+    borderRadius: "0.5em",
+  },
 }));
 
 export const StyledBtn = styled(Button)(({ theme }) => ({

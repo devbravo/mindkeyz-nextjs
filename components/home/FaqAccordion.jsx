@@ -43,8 +43,8 @@ const FaqAccordion = () => {
                 borderBottomRightRadius: `${expanded === item.index ? 0 : "0.4em"}`,
               }}
               expandIcon={<ExpandMoreIcon sx={{ color: theme.palette.primary.main }} />}
-              aria-controls='panel1a-contetn'
-              id='panel1a-header'>
+              aria-controls={`panel${item.index}a-content`}
+              id={`panel${item.index}a-header`}>
               <Typography variant='body1' sx={{ color: "#fff" }}>
                 {item.question}
               </Typography>
@@ -86,8 +86,8 @@ const FaqAccordion = () => {
                 borderBottomRightRadius: `${expanded === item.index ? 0 : "0.4em"}`,
               }}
               expandIcon={<ExpandMoreIcon sx={{ color: theme.palette.primary.main }} />}
-              aria-controls='panel1a-contetn'
-              id='panel1a-header'>
+              aria-controls={`panel${item.index}a-contetn`}
+              id={`panel${item.index}a-header`}>
               <Typography variant='body1' sx={{ color: "#fff" }}>
                 {item.question}
               </Typography>
