@@ -40,10 +40,10 @@ const Home = () => {
       <Grid container sx={{ position: "relative" }}>
         <Image src={banner} alt='studio banner' quality={100} priority placeholder='blur' width='8996' height='5123' />
         <StyledStack alignItems='center' justifyContent='center' md={6}>
-          <StyledH4BannerTypo variant='h4' sx={{ mb: "0.1em" }}>
+          <StyledH4BannerTypo variant='h4' sx={{ mb: "0.2em" }}>
             Best Dancehall & Afrobeats Online
           </StyledH4BannerTypo>
-          <StyledH6BannerTypo variant='h6' sx={{ mb: "1.5em" }}>
+          <StyledH6BannerTypo variant='h5' sx={{ mb: "1.5em", fontSize: "1.25rem" }}>
             We Provide The Keys To Your Musical Mind
           </StyledH6BannerTypo>
           {/* <StyledH4BannerTypo variant='h4' sx={{mb: '0.5em'}}>Big Christmas and new years sale!!!</StyledH4BannerTypo>

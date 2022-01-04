@@ -10,7 +10,6 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   width: "73%",
@@ -61,11 +60,6 @@ const LicenseCard = ({ ...props }) => {
               <Typography variant='body2' color='text.secondary' sx={{ mb: "-0.1em", textTransform: "capitalize" }}>
                 {info}
               </Typography>
-              {/* <ListItemText
-                sx={{ mb: "0.8em", textTransform: "capitalize" }}
-                primary={
-                }
-              /> */}
             </ListItem>
           ))}
         </List>
