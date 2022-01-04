@@ -46,11 +46,7 @@ const Navigation = () => {
 
   const tabs = (
     <React.Fragment>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        sx={{ ml: "auto", mr: "auto" }}
-        aria-label='icon position tabs example'>
+      <Tabs value={value} onChange={handleChange} sx={{ ml: "auto", mr: "auto" }} aria-label='navigation links'>
         {routes.map((route, index) => (
           <StyledTab key={index} component={Link} href={route.url} label={route.name} />
         ))}
@@ -62,7 +58,8 @@ const Navigation = () => {
             key={index}
             href={social.url}
             target='_blank'
-            rel='noreferrer'>
+            rel='noreferrer'
+            aria-label='social-media-icons'>
             {social.iconName}
           </a>
         ))}

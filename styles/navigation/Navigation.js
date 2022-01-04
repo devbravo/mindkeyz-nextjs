@@ -20,11 +20,11 @@ export const ToolbarMargin = styled("div")(({ theme }) => ({
 export const StyledTab = styled(Tab)(({ theme }) => ({
   ...theme.typography.tab,
   minWidth: 10,
-  color: '#fff',
+  color: "#fff",
   padding: "16px 6px",
   margin: "0px 5px",
   "&.Mui-selected": {
-    color: theme.palette.primary.main,
+    color: "#fff",
   },
 }));
 
@@ -32,7 +32,7 @@ export const StyledBtn = styled(Button)(({ theme }) => ({
   width: "10em",
   height: "1.9em",
   position: "absolute",
-  color: '#fff',
+  color: "#fff",
   top: "1.5em",
   left: "4em",
   [theme.breakpoints.down("md")]: {
@@ -57,7 +57,7 @@ export const StyledSwipeableDrawer = styled(SwipeableDrawer)(({ theme }) => ({
   },
   width: "100%",
   height: "100%",
-  zIndex: 1200
+  zIndex: 1200,
 }));
 
 export const StyledListItem = styled(ListItem)(({ theme }) => ({
