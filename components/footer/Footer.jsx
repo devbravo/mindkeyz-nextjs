@@ -1,7 +1,12 @@
 import * as React from "react";
 import Image from "next/image";
-import { Grid, useMediaQuery, useTheme, Typography } from "@mui/material";
-import { List, ListItem, ListItemIcon } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
 import { StyledFooter, StyledBox } from "../../styles/footer/Footer";
 import { StyledTxtField, StyledListItemTxt, StyledListItemTxtEmail } from "../../styles/footer/Footer";
 import { StyledBtn, StyledDivider, StyledGridCopy } from "../../styles/footer/Footer";

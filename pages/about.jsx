@@ -1,19 +1,21 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { styled } from "@mui/material/styles";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import ScrollTop from "../components/utility/ScrollToTop";
+import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import ScrollTop from "../components/utility/ScrollToTop";
 import recordingStudio from "../public/images/studioRecording.webp";
 import { StyledStack, StyledH4BannerTypo } from "../styles/home/Index";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import aboutCardData from "../data/about/AboutCard";
 import SEO from "../components/utility/SEO";
+
+const DynamicCardMedia = dynamic(() => import("@mui/material/CardMedia"));
 
 export const StyledParagraph1Typo = styled(Typography)(({ theme }) => ({
   marginTop: "0.1em",
@@ -102,9 +104,9 @@ const About = () => {
           <Grid item container direction='row' justifyContent='space-evenly' alignItems='flex-end'>
             {aboutCardData.map(cardData => (
               <Card key={cardData.index} sx={{ maxWidth: 300, mb: matchesMD ? "2em" : 0, borderRadius: "0.4em" }}>
-                <CardMedia>
+                <DynamicCardMedia>
                   <Image src={cardData.image.src} alt={cardData.name + " image"} height='350' width='400' />
-                </CardMedia>
+                </DynamicCardMedia>
                 <CardContent>
                   <Typography gutterBottom variant='h6' component='div' color={theme.palette.common.tertiary}>
                     {cardData.headerText}

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useTheme, useMediaQuery } from "@mui/material";
 import { useRouter } from "next/router";
+import { useTheme, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import Link from "../utility/Link";
-import { Tabs } from "@mui/material";
-import { Toolbar, Grid } from "@mui/material";
-import { List, ListItemIcon } from "@mui/material";
+import Tabs from "@mui/material/Tabs";
+import Toolbar from "@mui/material/Toolbar";
+import Grid from "@mui/material/Grid";
+import List from "@mui/material/List";
+import ListItemIcon from "@mui/material/ListItemIcon";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { routes } from "../../data/navigation/Navigation";

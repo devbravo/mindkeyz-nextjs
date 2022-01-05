@@ -4,7 +4,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActions } from "@mui/material";
+import Button from "@mui/material/Button";
+import CardActions from "@mui/material/CardActions";
 import { useTheme } from "@mui/material";
 
 const Carousel = ({ ...props }) => {
@@ -15,13 +16,13 @@ const Carousel = ({ ...props }) => {
       sx={{
         maxWidth: 300,
         mb: "4em",
-        mx: 'auto',
+        mx: "auto",
         color: theme.palette.common.tertiary,
         backgroundColor: theme.palette.common.secondaryDark,
-        borderRadius: '0.4em'
+        borderRadius: "0.4em",
       }}>
       <CardMedia>
-        <Image src={props.image.src} alt={props.name} height='400' width='400'/>
+        <Image src={props.image.src} alt={props.name} height='400' width='400' />
       </CardMedia>
       <CardContent>
         <Typography variant='body2' color='text.primary' align='left'>

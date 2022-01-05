@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useTheme } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FaqData1, FaqData2 } from "../../data/faq/Faq";
-import Grid from "@mui/material/Grid";
 
 const FaqAccordion = () => {
   const [expanded, setExpanded] = useState(false);
