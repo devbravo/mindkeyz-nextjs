@@ -57,8 +57,8 @@ const About = () => {
             quality={100}
             priority
             placeholder='blur'
-            width='5184'
-            height='2916'
+            // width='5184'
+            // height='2916'
           />
           <StyledStack justifyContent='center' alignItems='center' sx={{ mt: matchesSM ? "0%" : "-10%" }}>
             <StyledH4BannerTypo color='#fff' sx={{ fontSize: "1.9em", fontWeight: 600 }}>
