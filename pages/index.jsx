@@ -37,22 +37,17 @@ const Home = () => {
                     Mindkeyz brings you more than 300+ dancehall, afrobeat and trap instrumentals.'
       />
       <div id='back-to-top-anchor' style={{ marginTop: matchesMD ? "4em" : "3.2em" }} />
-      <Grid
-        container
-        sx={{ position: "relative" }}
-        // sx={{ position: "relative" }}
-      >
-        <Image
-          // src='/images/mindkeyzBanner.webp'
-          src={banner}
-          alt='studio banner'
-          quality={100}
-          priority
-          placeholder='blur'
-          // width='8996'
-          // height='5123'
-          // layout='responsive'
-        />
+      <Grid container sx={{ position: "relative" }}>
+        <Grid item container display='block'>
+          <Image
+            src='/images/mindkeyzBanner.webp'
+            alt='studio banner'
+            priority
+            width='8996'
+            height='5123'
+            layout='responsive'
+          />
+        </Grid>
         <StyledStack alignItems='center' justifyContent='center' md={6}>
           <StyledH4BannerTypo variant='h4' sx={{ mb: "0.2em" }}>
             Best Dancehall & Afrobeats Online

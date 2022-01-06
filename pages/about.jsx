@@ -10,7 +10,6 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import ScrollTop from "../components/utility/ScrollToTop";
-import recordingStudio from "../public/images/studioRecording.webp";
 import { StyledStack, StyledH4BannerTypo } from "../styles/home/Index";
 import aboutCardData from "../data/about/AboutCard";
 import SEO from "../components/utility/SEO";
@@ -51,15 +50,16 @@ const About = () => {
       <div id='back-to-top-anchor' style={{ marginTop: matchesMD ? "1em" : "4em" }} />
       <Grid item container>
         <Grid container sx={{ position: "relative" }}>
-          <Image
-            src={recordingStudio}
-            alt='recording room'
-            quality={100}
-            priority
-            placeholder='blur'
-            // width='5184'
-            // height='2916'
-          />
+          <Grid item container display='block'>
+            <Image
+              src='/images/studioRecording.webp'
+              alt='recording room'
+              priority
+              width='5184'
+              height='2916'
+              layout='responsive'
+            />
+          </Grid>
           <StyledStack justifyContent='center' alignItems='center' sx={{ mt: matchesSM ? "0%" : "-10%" }}>
             <StyledH4BannerTypo color='#fff' sx={{ fontSize: "1.9em", fontWeight: 600 }}>
               We Are Mindkeyz
