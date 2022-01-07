@@ -15,7 +15,12 @@ class MyDocument extends Document {
           <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
           <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
           <link
-            rel='prefetch'
+            rel='dns-prefetch'
+            href='https://Mindkeyz.infinity.airbit.com?config_id=8072&embed=1'
+            as='audio'
+            crossOrigin='true'></link>
+          <link
+            rel='preconnect'
             href='https://Mindkeyz.infinity.airbit.com?config_id=8072&embed=1'
             as='audio'
             crossOrigin='true'></link>

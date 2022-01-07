@@ -16,7 +16,6 @@ import { socials, socialsMobile } from "../../data/navigation/Social";
 import { StyledTab, StyledIconCont, StyledIconButton } from "../../styles/navigation/Navigation";
 import { StyledBtn, StyledAppBar } from "../../styles/navigation/Navigation";
 import { ToolbarMargin, StyledListItem, StyledListItemText } from "../../styles/navigation/Navigation";
-import logo from "../../public/images/Mindkeyz-Logo_Trans-White.webp";
 import ElevationScroll from "../utility/ElevationScroll";
 
 const StyledSwipeableDrawer = dynamic(() => import("../../styles/navigation/Navigation"), { ssr: false });
@@ -148,9 +147,9 @@ const Navigation = () => {
                   alt='company logo'
                   src='/images/Mindkeyz-Logo_Trans-White.webp'
                   priority
-                  layout='responsive'
                   width='1920'
                   height='246'
+                  layout='responsive'
                 />
               </Grid>
             </StyledBtn>

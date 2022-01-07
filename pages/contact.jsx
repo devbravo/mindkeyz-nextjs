@@ -22,7 +22,8 @@ import CircularSpinner from "../components/utility/Spinner";
 import { sendMail } from "../store/slices/form";
 import SEO from "../components/utility/SEO";
 
-const ResponseModal = dynamic(() => import("../components/utility/Modal"));
+const ResponseModal = dynamic(() => import("../components/utility/Modal"), { ssr: false });
+// const useForm = dynamic(() => import("react-hook-form"), { ssr: false });
 
 // Schema validation
 const schema = yup.object().shape({
