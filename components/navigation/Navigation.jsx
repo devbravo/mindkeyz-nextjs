@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import dynamic, { noSSR } from "next/dynamic";
 import { useRouter } from "next/router";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Image from "next/image";
@@ -12,11 +13,13 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { routes } from "../../data/navigation/Navigation";
 import { socials, socialsMobile } from "../../data/navigation/Social";
-import { StyledTab, StyledIconCont, StyledSwipeableDrawer, StyledIconButton } from "../../styles/navigation/Navigation";
+import { StyledTab, StyledIconCont, StyledIconButton } from "../../styles/navigation/Navigation";
 import { StyledBtn, StyledAppBar } from "../../styles/navigation/Navigation";
 import { ToolbarMargin, StyledListItem, StyledListItemText } from "../../styles/navigation/Navigation";
 import logo from "../../public/images/Mindkeyz-Logo_Trans-White.webp";
 import ElevationScroll from "../utility/ElevationScroll";
+
+const StyledSwipeableDrawer = dynamic(() => import("../../styles/navigation/Navigation"), { ssr: false });
 
 const Navigation = () => {
   const [value, setValue] = useState(0);
@@ -81,40 +84,44 @@ const Navigation = () => {
 
   const drawer = (
     <React.Fragment>
-      <StyledSwipeableDrawer
-        disableBackdropTransition={!iOS}
-        disableDiscovery={iOS}
-        open={openDrawer}
-        onClose={() => setOpenDrawer(false)}
-        onOpen={() => setOpenDrawer(true)}>
-        <ToolbarMargin />
-        <List disablePadding>
-          {routes.map((route, index) => (
-            <StyledListItem
-              key={index}
-              component={Link}
-              href={route.url}
-              onClick={() => {
-                setOpenDrawer(false);
-                setValue(route.activeIndex);
-              }}
-              divider
-              button
-              selected={value === route.activeIndex}
-              sx={{ color: "white" }}>
-              <ListItemIcon>{route.icon}</ListItemIcon>
-              <StyledListItemText disableTypography primary={route.name} />
-            </StyledListItem>
-          ))}
-        </List>
-        <Grid item container justifyContent='space-evenly' alignItems='flex-end' sx={{ height: "100%", mb: "1em" }}>
-          {socialsMobile.map((social, index) => (
-            <a style={{ color: "#fff" }} key={index} href={social.url} target='_blank' rel='noreferrer'>
-              {social.iconName}
-            </a>
-          ))}
-        </Grid>
-      </StyledSwipeableDrawer>
+      {openDrawer ? (
+        <StyledSwipeableDrawer
+          disableBackdropTransition={!iOS}
+          disableDiscovery={iOS}
+          open={openDrawer}
+          onClose={() => setOpenDrawer(false)}
+          onOpen={() => setOpenDrawer(true)}>
+          <ToolbarMargin />
+          <List disablePadding>
+            {routes.map((route, index) => (
+              <StyledListItem
+                key={index}
+                component={Link}
+                href={route.url}
+                onClick={() => {
+                  setOpenDrawer(false);
+                  setValue(route.activeIndex);
+                }}
+                divider
+                button
+                selected={value === route.activeIndex}
+                sx={{ color: "white" }}>
+                <ListItemIcon>{route.icon}</ListItemIcon>
+                <StyledListItemText disableTypography primary={route.name} />
+              </StyledListItem>
+            ))}
+          </List>
+          <Grid item container justifyContent='space-evenly' alignItems='flex-end' sx={{ height: "100%", mb: "1em" }}>
+            {socialsMobile.map((social, index) => (
+              <a style={{ color: "#fff" }} key={index} href={social.url} target='_blank' rel='noreferrer'>
+                {social.iconName}
+              </a>
+            ))}
+          </Grid>
+        </StyledSwipeableDrawer>
+      ) : (
+        ""
+      )}
       <StyledIconButton onClick={() => setOpenDrawer(!openDrawer)} disableRipple aria-label='main menu'>
         {!openDrawer ? (
           <MenuRoundedIcon sx={{ height: "36px", width: "36px", color: "#fff" }} />
@@ -136,7 +143,16 @@ const Navigation = () => {
               onClick={() => setValue(0)}
               sx={{ padding: "0", "&:hover": { backgroundColor: "transparent" } }}
               disableRipple>
-              <Image alt='company logo' src={logo} priority />
+              <Grid item container display='block'>
+                <Image
+                  alt='company logo'
+                  src='/images/Mindkeyz-Logo_Trans-White.webp'
+                  priority
+                  layout='responsive'
+                  width='1920'
+                  height='246'
+                />
+              </Grid>
             </StyledBtn>
             {matches ? drawer : tabs}
           </Toolbar>

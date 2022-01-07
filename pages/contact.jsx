@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -17,9 +18,11 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { StyledPageGrid } from "../styles/global";
 import UseValidationErrors from "../hooks/useValidationErrors";
 import CircularSpinner from "../components/utility/Spinner";
-import ResponseModal from "../components/utility/Modal";
+// import ResponseModal from "../components/utility/Modal";
 import { sendMail } from "../store/slices/form";
 import SEO from "../components/utility/SEO";
+
+const ResponseModal = dynamic(() => import("../components/utility/Modal"));
 
 // Schema validation
 const schema = yup.object().shape({
@@ -55,6 +58,7 @@ export const StyledBtn = styled(Button)(({ theme }) => ({
 }));
 
 const Contact = () => {
+  const [send, setSend] = useState(false);
   const dispatch = useDispatch();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -191,7 +195,7 @@ const Contact = () => {
                   helperText={errors.message?.message}
                   {...register("message", { required: true })}
                 />
-                <StyledBtn variant='contained' sx={{ mr: "1em" }} type='submit'>
+                <StyledBtn onClick={() => setSend(!send)} variant='contained' sx={{ mr: "1em" }} type='submit'>
                   Send
                 </StyledBtn>
               </Grid>
@@ -259,7 +263,7 @@ const Contact = () => {
             </Grid>
           </Grid>
         </Grid>
-        <ResponseModal />
+        {send ? <ResponseModal /> : ""}
       </Grid>
     </div>
   );

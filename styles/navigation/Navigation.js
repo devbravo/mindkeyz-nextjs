@@ -55,7 +55,7 @@ export const StyledIconCont = styled("div")(({ theme }) => ({
   bottom: "1em",
 }));
 
-export const StyledSwipeableDrawer = styled(SwipeableDrawer)(({ theme }) => ({
+const StyledSwipeableDrawer = styled(SwipeableDrawer)(({ theme }) => ({
   ".MuiDrawer-paper": {
     backgroundColor: theme.palette.common.tertiary,
   },
@@ -97,3 +97,5 @@ export const StyledIconButton = styled(IconButton)({
     backgroundColor: "transparent",
   },
 });
+
+export default StyledSwipeableDrawer;
