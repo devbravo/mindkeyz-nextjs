@@ -11,7 +11,6 @@ import { StyledFooter, StyledBox } from "../../styles/footer/Footer";
 import { StyledTxtField, StyledListItemTxt, StyledListItemTxtEmail } from "../../styles/footer/Footer";
 import { StyledBtn, StyledDivider, StyledGridCopy } from "../../styles/footer/Footer";
 import { StyledMailRoundedIcon, StyledAddressTyp } from "../../styles/footer/Footer";
-import logo from "../../public/images/Mindkeyz-Logo_Trans-White.webp";
 
 const Footer = () => {
   const theme = useTheme();
@@ -39,11 +38,10 @@ const Footer = () => {
         sx={{ width: "100%" }}
         justifyContent='center'
         alignItems='center'>
-        <Grid item sx={{ width: "9em", height: "1em", mb: matchesMD ? "1em" : 0 }}>
+        <Grid item container display='block' sx={{ width: "9em", height: "1em", mb: matchesMD ? "1em" : 0 }}>
           <Image
             alt='company logo'
             src='/images/Mindkeyz-Logo_Trans-White.webp'
-            priority
             width='1920'
             height='246'
             layout='responsive'
