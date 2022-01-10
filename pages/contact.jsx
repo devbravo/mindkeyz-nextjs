@@ -17,12 +17,12 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { StyledPageGrid } from "../styles/global";
 import UseValidationErrors from "../hooks/useValidationErrors";
-import CircularSpinner from "../components/utility/Spinner";
-// import ResponseModal from "../components/utility/Modal";
+// import CircularSpinner from "../components/utility/Spinner";
 import { sendMail } from "../store/slices/form";
 import SEO from "../components/utility/SEO";
 
 const ResponseModal = dynamic(() => import("../components/utility/Modal"), { ssr: false });
+const CircularSpinner = dynamic(() => import("../components/utility/Spinner"), { ssr: false });
 // const useForm = dynamic(() => import("react-hook-form"), { ssr: false });
 
 // Schema validation
@@ -88,6 +88,8 @@ const Contact = () => {
     }
   }, [reset, status]);
 
+  // TODO
+  // Could be dynamically imported
   UseValidationErrors(setError);
 
   return (

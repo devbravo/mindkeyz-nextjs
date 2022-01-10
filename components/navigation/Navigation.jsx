@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import dynamic, { noSSR } from "next/dynamic";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Image from "next/image";
@@ -58,6 +58,8 @@ const Navigation = () => {
         {routes.map((route, index) => (
           <StyledTab
             key={index}
+            // TODO
+            // link could be dynamically loaded
             component={Link}
             href={route.url}
             label={route.name}

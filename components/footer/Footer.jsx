@@ -40,7 +40,14 @@ const Footer = () => {
         justifyContent='center'
         alignItems='center'>
         <Grid item sx={{ width: "9em", height: "1em", mb: matchesMD ? "1em" : 0 }}>
-          <Image alt='company logo' src={logo} priority />
+          <Image
+            alt='company logo'
+            src='/images/Mindkeyz-Logo_Trans-White.webp'
+            priority
+            width='1920'
+            height='246'
+            layout='responsive'
+          />
         </Grid>
         <Grid item>
           <List sx={{ color: "#fff" }}>

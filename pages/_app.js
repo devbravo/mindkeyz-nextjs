@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/globals.css";
 import Layout from "../components/layout/Layout";
 import { ThemeProvider } from "@mui/material/styles";
