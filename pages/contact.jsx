@@ -189,7 +189,7 @@ const Contact = () => {
               sx={{
                 backgroundColor: "#1B1C1E",
                 width: matchesSM ? "100%" : "35%",
-                height: matchesSM ? "100%" : undefined,
+                height: matchesSM ? "80vh" : undefined,
               }}>
               <Grid
                 item
