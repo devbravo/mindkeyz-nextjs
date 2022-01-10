@@ -4,14 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { styled } from "@mui/material/styles";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -19,10 +16,12 @@ import { StyledPageGrid } from "../styles/global";
 import UseValidationErrors from "../hooks/useValidationErrors";
 // import CircularSpinner from "../components/utility/Spinner";
 import { sendMail } from "../store/slices/form";
+import { StyledTxtField, StyledBtn } from "../styles/contact/Contact";
 import SEO from "../components/utility/SEO";
 
 const ResponseModal = dynamic(() => import("../components/utility/Modal"), { ssr: false });
 const CircularSpinner = dynamic(() => import("../components/utility/Spinner"), { ssr: false });
+// const UseValidationErrors = dynamic(() => import("../hooks/useValidationErrors"));
 // const useForm = dynamic(() => import("react-hook-form"), { ssr: false });
 
 // Schema validation
@@ -32,31 +31,6 @@ const schema = yup.object().shape({
   email: yup.string().trim().email("Email must be a valid email").required("Email is required"),
   message: yup.string().trim().required("Message is required"),
 });
-
-export const StyledTxtField = styled(TextField)(({ theme }) => ({
-  backgroundColor: theme.palette.common.tertiaryLight,
-  marginBottom: "1em",
-  marginRight: "1em",
-  "&.MuiTextField-root": {
-    width: "35%",
-    [theme.breakpoints.down("sm")]: {
-      width: "63%",
-    },
-  },
-}));
-
-export const StyledBtn = styled(Button)(({ theme }) => ({
-  backgroundColor: theme.palette.common.mindPurpDark,
-  padding: "1em 0.5em 1em 0.5em",
-  height: "3.35em",
-  fontSize: "0.875em",
-  textTransform: "none",
-  fontWeight: 300,
-  width: "73%",
-  [theme.breakpoints.down("sm")]: {
-    width: "63%",
-  },
-}));
 
 const Contact = () => {
   const [send, setSend] = useState(false);

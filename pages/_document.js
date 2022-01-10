@@ -10,10 +10,14 @@ class MyDocument extends Document {
       <Html lang='en'>
         <Head>
           <meta name='robots' content='all' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter&display=optional' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
+          <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter&display=optional' async />
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap'
+            async
+          />
+          {/* <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' /> */}
+          <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' async />
           <link
             rel='dns-prefetch'
             href='https://Mindkeyz.infinity.airbit.com?config_id=8072&embed=1'
