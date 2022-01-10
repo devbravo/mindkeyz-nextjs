@@ -186,7 +186,11 @@ const Contact = () => {
               direction='column'
               alignItems='center'
               justifyContent='center'
-              sx={{ backgroundColor: "#1B1C1E", width: matchesSM ? "100%" : "35%" }}>
+              sx={{
+                backgroundColor: "#1B1C1E",
+                width: matchesSM ? "100%" : "35%",
+                height: matchesSM ? "100%" : undefined,
+              }}>
               <Grid
                 item
                 container
