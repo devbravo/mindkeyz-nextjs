@@ -48,7 +48,7 @@ export const {
 } = formSlice.actions
 export default formSlice.reducer
 
-const url = `http://localhost:3001/api/contact`
+const url = `'https://mindkeyz-api.herokuapp.com/api/contact'`
 
 // Action Creator
 export const sendMail = (data) => (dispatch, getState) => {
