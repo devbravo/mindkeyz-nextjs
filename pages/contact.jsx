@@ -15,11 +15,12 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { StyledPageGrid } from "../styles/global";
 import UseValidationErrors from "../hooks/useValidationErrors";
 // import CircularSpinner from "../components/utility/Spinner";
+import ResponseModal from '../components/utility/Modal'
 import { sendMail } from "../store/slices/form";
 import { StyledTxtField, StyledBtn } from "../styles/contact/Contact";
 import SEO from "../components/utility/SEO";
 
-const ResponseModal = dynamic(() => import("../components/utility/Modal"), { ssr: false });
+//const ResponseModal = dynamic(() => import("../components/utility/Modal"), { ssr: false });
 const CircularSpinner = dynamic(() => import("../components/utility/Spinner"), { ssr: false });
 // const UseValidationErrors = dynamic(() => import("../hooks/useValidationErrors"));
 // const useForm = dynamic(() => import("react-hook-form"), { ssr: false });
@@ -189,14 +190,20 @@ const Contact = () => {
               sx={{
                 backgroundColor: "#1B1C1E",
                 width: matchesSM ? "100%" : "35%",
-                height: matchesSM ? "80vh" : undefined,
+                // height: matchesSM ? "80vh" : undefined,
               }}>
               <Grid
                 item
                 container
                 direction={matchesSM ? "column" : "row"}
                 alignItems={matchesSM ? "center" : "flex-end"}
-                sx={{ color: "#fff", mb: matchesSM ? "2em" : "1em", mt: matchesSM ? 0 : "-3em" }}>
+                sx={{
+                  color: "#fff",
+                  mb: matchesSM ? "2em" : "1em",
+                  mt: matchesSM ? 0 : "-3em",
+                  // height: "5em",
+                  // width: "20em",
+                }}>
                 <Grid item sx={{ mr: matchesSM ? 0 : "1em" }}>
                   <AccessTimeIcon />
                 </Grid>

@@ -18,7 +18,6 @@ import LicenseCard from "../components/home/LicenseCard";
 import LicenseData from "../data/licensing/Licensing";
 import FaqAccordion from "../components/home/FaqAccordion";
 import Carousel from "../components/home/Carousel";
-import banner from "../public/images/mindkeyzBanner.webp";
 import { StyledStack, StyledGrid, StyledHowToContainer, StyledH6Typo } from "../styles/home/Index";
 import { StyledH4BannerTypo, StyledH6BannerTypo, StyledBtn, StyledShoppingCartIcon } from "../styles/home/Index";
 // import CountDownTimer from "../components/utility/CountdownTimer";
