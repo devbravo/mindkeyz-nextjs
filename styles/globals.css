@@ -1,9 +1,12 @@
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+ 
 }
 
 a {
@@ -13,4 +16,19 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.swiper-button-next { 
+  color: #6600ff !important;
+  top: 40% !important;
+  right: -1px !important
+ }
+.swiper-button-prev {
+  color: #6600ff !important;
+  top: 40% !important;
+  left: -1px !important
+}
+
+.swiper-pagination-bullet {
+  background-color: #6600ff !important;
 }

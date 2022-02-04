@@ -1,13 +1,32 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
   render() {
     return (
       <Html lang='en'>
         <Head>
-          <link href='https://fonts.googleapis.com/css2?family=Inter&display=optional' rel='stylesheet' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
+          <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter&display=optional' async />
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap'
+            async
+          />
+          {/* <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' /> */}
+          <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' async />
+          <link
+            rel='dns-prefetch'
+            href='https://Mindkeyz.infinity.airbit.com?config_id=8072&embed=1'
+            as='audio'
+            crossOrigin='true'></link>
+          <link
+            rel='preconnect'
+            href='https://Mindkeyz.infinity.airbit.com?config_id=8072&embed=1'
+            as='audio'
+            crossOrigin='true'></link>
         </Head>
         <body>
           <Main />
